@@ -1,0 +1,65 @@
+/*------------------------------------------------*/
+/*---------[PLANTILLA DE CATALOGO]----------------*/
+/*------------------------------------------------*/
+
+.catalog {
+	
+	.items {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+
+		.item {
+			margin-bottom: 2rem;	
+			position: relative;
+			width: 30%;	
+			float: left;
+			margin: 1.5%;	
+			background-color: #ddd;
+			margin-bottom: 1.5em;
+
+			@media (max-width: $tablet-width) {
+				width: 47%;
+			}
+			@media (max-width: $smaller-width) {
+				width: 97%;
+			}
+			a {
+
+			}
+			img {
+				width: 100%;
+			}
+			h2 {
+				font-size: 1.25rem; 
+				color: #444;
+				line-height: 1.8rem;
+				width: 100%;
+				padding: 0 1rem;
+				background-color: #444;
+				color: #fff;	
+				margin: -7px 0 0 0;
+			}
+			h3 {
+				font-size: 1rem; 
+				color: #666;
+				padding: .5rem .35rem;
+				margin: 0;
+			}
+			p {
+				color: #444;
+				margin: 0;
+				padding: .0 .35rem .5rem;
+				font-size: .9rem;
+				line-height: 1.2rem;
+				margin: 0;
+			}
+		}
+	}	
+}
+
+
+
+
+ 
+

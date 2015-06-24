@@ -1,0 +1,77 @@
+
+/*-----------------------------------------------*/
+/*---------------[LANDING PAGE]------------------*/
+/*-----------------------------------------------*/
+
+.landing-page {
+	width: 95%;
+	margin: 0 2.5%;
+
+	.entry-content {
+		display: inline-block;
+		vertical-align: top;
+		width: 61%;
+		margin: 0px 2% 0px 0px;
+		float: left;		
+
+		@media (max-width: 768px) {
+			width: 95%;
+			margin: 2.5%;
+		}
+
+		figure { margin: 0;
+			img { width: 100%;	}
+		}
+	}	
+	.entry-form {
+		width: 31%;
+		display: inline-block;
+		vertical-align: top;
+		background-color: #CCC;
+		border-radius: 0.5em;
+		margin: 0px 0px 0px 2%;
+		padding: 0px 2% 1em;
+		float: right;
+		@include rounded;
+
+		@media (max-width: 768px) {
+			width: 91%;
+			margin: 0 2.5% 1.5em;
+		}
+	}
+	.entry-bloques {
+		width: 100%;
+		clear: both;
+		margin: 1em 0;
+		display: inline-block;
+
+		.bloque-personalizado {
+			width: 30%;
+			margin: 1.5%;
+			float: left;
+			display: inline-block;
+			vertical-align: top;
+
+			figure { margin: 0;
+				img { 
+					max-width: 100%;
+					margin: 0px auto;
+					display: block;
+				}
+			}
+
+			@media (max-width: 820px) {
+				width: 45%;
+				margin: 0 2.5% 1.5em;
+			}
+
+			@media (max-width: 520px) {
+				width: 95%;
+				margin: 0 2.5% 1.5em;
+			}
+		}
+	}
+
+
+
+}

@@ -1,0 +1,66 @@
+/*------------------------------------------------*/
+/*---------[PLANTILLA DE CONTACTO]----------------*/
+/*------------------------------------------------*/
+
+.contacto {
+
+	.contenido {
+		width: 48%;
+		padding-right: 2%;	
+		float: left;
+		
+		@media (max-width: $desktop-width) {
+			width: 100%;
+			padding: 0;
+			float: none;
+			margin-bottom: 2em;
+		}
+		.datos  {
+			padding-bottom: 1em;
+
+			h3  { 
+				font-size: 1.25rem;	
+				padding: .4rem 1rem .5rem;
+				margin: 0;
+
+				i {	padding-right: .4rem; }
+			}
+			p {
+				padding: .4rem 1rem .5rem;
+				margin: 0;
+			}
+		}
+		.social {
+		    padding-bottom: 1em;
+		}
+	}
+	.formulario {
+		width: 40%;
+		float: left;
+		padding: 1em 5%;
+		background-color: #E5E5E5;
+		border-radius: 4px;
+		font-size: .9em;
+
+		@media (max-width: $desktop-width) {
+			padding: 4%;	
+			width: 92%;
+			float: none;
+			margin-bottom: 1em;
+		}	
+	}
+	.mapa {
+		width: 100%;
+		clear: both;
+		display: inline-block;
+		padding: .5em 0px;
+		background: none repeat scroll 0% 0% #eee;
+		margin: 2em 0 !important;
+
+		@media (max-width: $tablet-width) { 
+				display: none;
+			}
+	}
+}
+
+

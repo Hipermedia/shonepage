@@ -1,0 +1,47 @@
+
+/*------------------------------------------------*/
+/*-----------------[ARTÍCULOS]--------------------*/
+/*------------------------------------------------*/
+
+/* Resumen de artículos */
+.articulos {
+	padding: 0px 3%;
+	width: 100%;
+	float: left;
+	clear: none;
+	margin: 0;
+
+	@media (max-width: $tablet-width) {
+		width: 94%;
+		margin: 3%;
+	}
+
+	.title {
+		line-height: 1em;
+	}
+	.entry-autor {
+		font-size: .75em;
+		font-weight: normal;
+		color: #9d9d9d;
+		font-family: sans-serif;
+		margin-bottom: .3em;
+	}
+	.entry-summary {
+		height: 15.625em;
+		overflow:hidden;
+		font-size: .85em;
+		line-height: 1.4em;
+		height: 18em;
+	}
+	.entry-summary p {
+		margin-bottom: .5em;
+	}
+
+	.entry-thumbnail,
+	.entry-thumbnail img {
+		float: none;
+		width:100%;	
+	}
+
+}
+

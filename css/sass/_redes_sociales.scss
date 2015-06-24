@@ -1,0 +1,33 @@
+/*--------------------------------------------------*/
+/*-------------------[REDES SOCIALES]------------------*/
+/*--------------------------------------------------*/
+
+.anli-ss {
+	
+	a {
+		display: inline-block;
+		width: 24px;
+		height: 24px;
+		margin: .25rem;
+		vertical-align: middle;
+		-o-transition: all .3s;
+		-moz-transition: all .3s;
+		-webkit-transition: all .3s;
+		-ms-transition: all .3s;	
+	}
+
+	a:hover { background-position: left -34px; }
+
+	.facebook { background: url(images/ss/anli/facebook.png) left top no-repeat; margin-right: 0;}
+	.twitter { background: url(images/ss/anli/twitter.png) left top no-repeat; }
+	.googleplus { background: url(images/ss/anli/googleplus.png) left top no-repeat; }
+	.linkedin { background: url(images/ss/anli/linkedin.png) left top no-repeat; }
+	.pinterest { background: url(images/ss/anli/pinterest.png) left top no-repeat; }		
+}
+
+
+
+
+
+
+

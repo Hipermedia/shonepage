@@ -1,0 +1,41 @@
+/*------------------------------------------------*/
+/*-----------------[FOOTER]-----------------------*/
+/*------------------------------------------------*/
+
+
+/* =Footer
+----------------------------------------------- */
+
+.footer {
+	padding-top: 2rem;	
+	overflow: hidden; 
+	white-space: nowrap;
+	clear: both;
+	display: block;
+	max-width: $desktop-width;
+	margin: 0 auto;
+	background: $footer-bg;
+
+	/* Firma SH  */
+	a.firma-sh  {	 
+		background-image: url(images/dev-by-soluciones-hipermedia.png);
+		background-repeat: no-repeat;
+		background-size: 30px 60px;
+		padding-left: 30px;
+		float: right;
+		color: #7A7A7A;
+		text-decoration: none;
+		font-size: 1rem;
+		height: 30px;
+		line-height: 30px;
+		margin: .5rem 1rem 1rem;
+		
+		&:hover {	color: #333;	background-position: 0 bottom;  }
+	}
+		
+	
+}
+
+
+
+

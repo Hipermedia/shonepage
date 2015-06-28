@@ -1,0 +1,182 @@
+.landing {
+  /*boton global*/
+}
+
+.landing .boton {
+  color: white;
+  min-width: 120px;
+  text-decoration: none;
+  padding: .8rem;
+  border-radius: 5px;
+  border: 1px white solid;
+}
+
+.landing .boton:hover {
+  background: #51A387;
+}
+
+.landing h2 {
+  font-size: 50px;
+}
+
+.landing h3 {
+  font-size: 28px;
+}
+
+.landing .primero {
+  padding-top: 5rem;
+  text-align: center;
+  position: relative;
+  background-image: url("images/landing/bg-primero.png");
+  background-size: 100%;
+  height: 630px;
+}
+
+.landing .primero .wrapper {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+.landing .primero .wrapper .texto, .landing .primero .wrapper .imagen {
+  width: 49.5%;
+  display: inline-block;
+}
+
+.landing .primero .wrapper .texto {
+  padding-left: 5rem;
+  text-align: left;
+  color: white;
+}
+
+.landing .primero .wrapper .texto h2, .landing .primero .wrapper .texto h3 {
+  padding-bottom: 1.5rem;
+}
+
+.landing .primero .wrapper img {
+  height: 450px;
+}
+
+.landing .segundo {
+  color: white;
+  padding: 3rem 0 3rem 0;
+  background: #50AA8D;
+  text-align: center;
+}
+
+.landing .segundo .wrapper {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+.landing .segundo .wrapper h3 {
+  padding: 0 6rem 2rem 6rem;
+  font-size: 28px;
+}
+
+.landing .segundo .wrapper .contenido {
+  padding: 0 1rem 0 1rem;
+  width: 33%;
+  display: inline-block;
+}
+
+.landing .segundo .wrapper .contenido .imagen {
+  vertical-align: top;
+  height: 200px;
+  width: 200px;
+  margin: 0 auto;
+}
+
+.landing .segundo .wrapper .contenido p {
+  font-size: 22px;
+  padding-top: 1rem;
+}
+
+.landing .pemarte {
+  width: 100%;
+  color: white;
+  background: #2F5E4E;
+}
+
+.landing .pemarte .wrapper {
+  float: right;
+  width: 50%;
+  display: inline-block;
+}
+
+.landing .pemarte .wrapper .texto {
+  width: 558px;
+  float: left;
+  text-align: left;
+  padding: 2rem;
+}
+
+.landing .pemarte .imagen {
+  vertical-align: top;
+  width: 50%;
+  display: inline-block;
+  background: white;
+}
+
+.landing .pemarte:nth-child(2n+1) {
+  background: #50AA8D;
+}
+
+.landing .pemarte:nth-child(2n+1) .wrapper {
+  float: left;
+  text-align: left;
+}
+
+.landing .pemarte:nth-child(2n+1) .wrapper .texto {
+  float: right;
+  text-align: right;
+}
+
+.landing .pemarte:nth-child(2n+1) .boton:hover {
+  background: #2F5E4E;
+}
+
+.landing .final {
+  width: 100%;
+  padding: 3rem 0 3rem 0;
+  background: #fff;
+}
+
+.landing .final .wrapper {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+.landing .final .wrapper .imagen, .landing .final .wrapper .texto {
+  width: 49.5%;
+  display: inline-block;
+}
+
+.landing .final .wrapper .texto {
+  vertical-align: top;
+  padding: 1rem;
+  color: white;
+}
+
+.landing .final .wrapper .texto h2, .landing .final .wrapper .texto h3 {
+  color: #2F5E4E;
+  padding-bottom: 1.5rem;
+}
+
+.landing .final .wrapper .texto .boton {
+  color: #2F5E4E;
+  min-width: 120px;
+  text-decoration: none;
+  padding: .8rem;
+  border-radius: 5px;
+  border: 1px #2F5E4E solid;
+}
+
+.landing .final .wrapper .texto .boton:hover {
+  background: #2F5E4E;
+  color: white;
+}
+
+.landing .final .wrapper img {
+  display: block;
+  margin: 0 auto;
+}

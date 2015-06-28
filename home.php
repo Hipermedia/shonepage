@@ -17,13 +17,13 @@ get_header(); ?>
 <section role="main" class="portada">
 
 	<!-- Flexslider vía OT -->
-	<?php get_template_part( 'content', 'flexslider-ot' ); ?>
+    <?php get_template_part( 'content', 'flexslider-ot' ); ?>
     
 
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+<!--     <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
       Launch demo modal
-    </button>
+    </button> -->
 
     <!-- Modal -->
     <section>
@@ -35,7 +35,7 @@ get_header(); ?>
                 <h4 class="modal-title" id="myModalLabel">Modal title</h4>
               </div>
               <div class="modal-body">
-                ...
+                Ventanilla modal :D
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -46,41 +46,72 @@ get_header(); ?>
         </div>
     </section>
 
-    <!-- Artículos en portada -->
-    <?php 
-        $catid = get_ot('categoria_portada', ''); 
-        $post_per_page = get_ot('numero_categoria_portada', ''); 
-        //Consulta
-        $args = array( 
-            'cat' => $catid, 
-            'posts_per_page' => $post_per_page, 
-            'paged' => get_query_var('paged'), 
-            );
-        $consulta = new WP_Query( $args );
-    ?> 
-    <?php if ( $consulta ->have_posts() ) :   ?>
-        <section class="articulos">
-            
-            <a class="articulos-titulo" href="#">
-                <?php print_ot('titulo_categoria_portada', ''); ?>
-            </a>
-            
-            <?php while ( $consulta->have_posts() ) : $consulta->the_post(); ?>                         
-                <?php get_template_part( 'content', get_post_format() ); ?>
-            <?php endwhile; ?>                
+   <!-- CAMPOS OT DE ONE PAGE -->
+   <section class="landing">
+   <?php while ( have_posts() ) : the_post(); ?>
+    <section class="bloque primero">
+        <div class="wrapper">
+            <div class="texto">
+                <?php echo get_ot('texto_primera',''); ?>
+                <a href="<?php echo get_ot('url_btn1_primera',''); ?>" class="boton" data-toggle="modal" data-target="#myModal"><?php echo get_ot('boton1_primera',''); ?></a>
+                <a href="<?php echo get_ot('url_btn2_primera',''); ?>" class="boton"><?php echo get_ot('boton2_primera',''); ?></a>
+            </div>
+            <figure class="imagen">
+                <img src="<?php echo get_ot('imagen_primera',''); ?>" alt="">
+            </figure>
+        </div>
+    </section>
+    
+    <section class="bloque segundo">
+        <div class="wrapper">
+            <h2><?php echo get_ot('encabezado_segunda',''); ?></h2>
+            <?php $bloques_segunda = get_ot('imagen_texto_segunda', array()); ?>
+            <?php foreach ($bloques_segunda as $bloque) { ?>
+                <div class="contenido">
+                    <figure class="imagen">
+                        <img src="<?php echo $bloque['imagen']; ?>" alt="">
+                    </figure>
+                    <h3><?php echo $bloque['title']; ?></h3>
+                    <p><?php echo $bloque['texto']; ?></p>
+                </div>
+            <?php } ?>
+        </div>
+    </section>
+    
+    <?php $bloques_pemarte = get_ot('bloques_tercera', array()); ?>
+    <?php foreach ($bloques_pemarte as $bloque ) { ?>
+    <section class="bloque pemarte">
+        <div class="wrapper">
+            <div class="texto">
+                <h2><?php echo $bloque['title']; ?></h2>
+                <p><?php echo $bloque['texto']; ?></p>
+                <a href="<?php echo $bloque['url']; ?>" class="boton"><?php echo $bloque['boton']; ?></a>
+            </div>
+        </div>
+        <figure class="imagen">
+            <img src="<?php echo $bloque['imagen']; ?>" alt="">
+        </figure>
+    </section>
+    <?php } ?>
+    
+    <!-- hacer función para que se imprima sólo si hay contenido -->
+    <!-- <section class="bloque final">
+        <div class="wrapper">
+            <figure class="imagen">
+                <img src="<?php echo get_ot('imagen_cuarta'); ?>" alt="">
+            </figure>
+            <div class="texto">
+                <?php echo get_ot('texto_cuarta'); ?>
+                <a href="<?php echo get_ot('url_btn_cuarta',''); ?>" class="boton"><?php echo get_ot('boton_cuarta',''); ?></a>
+            </div>
+        </div>
+    </section> -->
+    
+   <?php endwhile; // end of the loop. ?>
+   </section>
 
-            <?php the_numbered_nav(); ?>        
-
-        </section>
-
-    <?php endif; ?>
-	<?php wp_reset_query(); ?>
-         
-    <!-- Sidebar -->
-    <?php get_sidebar(); ?>    
-                    
     <!-- Galería en portafa (Formato filmstrip) -->
-    <?php get_template_part( 'inc/content', 'galeria-filmstrip-slider' ); ?>          
+    <?php get_template_part( 'inc/content', 'galeria-filmstrip-slider' ); ?>
           
 </section><!-- .portada -->
 

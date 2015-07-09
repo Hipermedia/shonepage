@@ -14,7 +14,7 @@ get_header(); ?>
 			
 				<?php the_content(); ?>	
 			    
-				<?php the_social_share(); ?>
+				<?php anliSocialShare(); ?>
 	   
 		</article><!-- .single ?> -->
 	<?php endwhile; // end of the loop. ?>

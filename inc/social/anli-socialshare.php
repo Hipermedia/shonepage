@@ -1,3 +1,8 @@
+<?php 
+/** Botones para compartir en redes sociales. Estilo ANLI
+------------------------------------------------------------------- */ 
+?>
+
 <div class="anli-ss">  
     <div id="footer-compartir">
     	<div class="recomienda">Compartir:</div>            

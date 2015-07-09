@@ -69,8 +69,16 @@ function plantilla_url() {
 function get_plantilla_url() {
 	return get_bloginfo( 'template_url' );
 }
-function the_social_share() {
-	get_template_part( 'socialshare');
+
+/* BLOQUES
+ * ------------------------------------------------------------- */
+/* CLASSIC; social link buttons */
+function classicSocialShare() {
+	get_template_part( 'inc/social/classic-sociallinks');
+}
+/* ANLI; social share buttons */
+function anliSocialShare() {
+	get_template_part( 'inc/social/anli-socialshare');
 }
 
 

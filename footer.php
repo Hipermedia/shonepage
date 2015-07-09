@@ -20,7 +20,7 @@
 <?php waypoints(); // Librería que detecta puntos en el scroll de pantalla ?>
 <?php bootstrap(); // framework Bootsrap ?>
 <?php bootstrapMaterial(); // Bootsrap - Material ?>
-<?php ripples(); // framework Bootsrap ?>
+<?php ripples(); // Complemento de Bootsrap - Material ?>
 <?php themejs(); // Los scripts personalizados del tema ?>
 
 

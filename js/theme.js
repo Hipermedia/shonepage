@@ -1,7 +1,6 @@
 jQuery(document).ready(function($) {
 
-	//Aquí van los Jquerys y JS personalizados del tema
-	alert('hola');
+
 	// Reduce el header al hacer scrolldown; la animación se realiza con CSS
 	$(window).on("scroll touchmove", function () {
 		$('#header-wrapper').toggleClass('tiny', $(document).scrollTop() > 0);

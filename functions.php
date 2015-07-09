@@ -402,12 +402,17 @@ $template_url = get_bloginfo( 'template_url' );
 	wp_enqueue_script( 'bootstrap', $template_url .'/js/bootstrap.js', array('jquery'), '', 1);
 }
 
-// Bootstrap
+// Bootstrap Material
 function bootstrapMaterial() {
 $template_url = get_bloginfo( 'template_url' );
 	wp_enqueue_script( 'bootstrapMaterial', $template_url .'/js/bootstrap-material/material.min.js', array('jquery'), '', 1);
-	wp_enqueue_script( 'bootstrapMaterial', $template_url .'/js/material/ripples.min.js', array('jquery'), '', 1);
 }
+// Ripples (complemento de bootrapmaterial)
+function ripples() {
+$template_url = get_bloginfo( 'template_url' );
+	wp_enqueue_script( 'ripples', $template_url .'/js/bootstrap-material/ripples.js', array('jquery'), '', 1);
+}
+
 
 // Scripts del tema
 function themejs() {

@@ -55,29 +55,24 @@
 
 <body <?php body_class(); ?>>
 
-<div class="header-wrapper">
-    <header id="header" class="header" role="banner" >
-                
-            <!-- Logo -->
-            <a href="<?php inicio_url(); ?>" id="header-logo" class="logo  animated flipInX">
-                <img src="<?php print_ot('logo', get_plantilla_url().'/images/logo.png'); ?>" alt="<?php bloginfo('name'); ?>">
-            </a>
-            
-            <!-- Redes sociales -->
-            <?php classicSocialShare(); ?>
-            
-            <!-- Formulario de búsqueda -->
-            <?php get_search_form(); ?>
-            
-            <!-- Menú principal -->        
-            <nav id="header-main-nav" class="main-nav" role="navigation">
-                <!-- Icono de menú para versión adaptativa -->
-                <a class="toggle-nav" href="#">MENU DE NAVEGACIÓN</a>
-                <!-- Menu WordPress -->
-                <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '', 'menu_class' => 'activo', 'menu_id' => 'header-menu') ); ?>
-            </nav>
+<header id="header" class="Header" role="banner" >
+    <section class="Header-contenido">
+        <!-- Logo -->
+        <a href="<?php inicio_url(); ?>" id="header-logo" class="Header-logo  animated flipInX">
+            <img src="<?php print_ot('logo', get_plantilla_url().'/images/logo.png'); ?>" alt="<?php bloginfo('name'); ?>">
+        </a>
+        <!-- Redes sociales -->
+        <?php classicSocialShare(); ?>
+        <!-- Formulario de búsqueda -->
+        <?php get_search_form(); ?>
+        <!-- Menú principal -->        
+        <nav id="header-main-nav" class="main-nav" role="navigation">
+            <!-- Icono de menú para versión adaptativa -->
+            <a class="toggle-nav" href="#">MENU DE NAVEGACIÓN</a>
+            <!-- Menu WordPress -->
+            <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '', 'menu_class' => 'activo', 'menu_id' => 'header-menu') ); ?>
+        </nav>
+    </section>
+</header>
 
-    </header>
-</div>
-
-<main class="content-wrapper">
+<main class="main">

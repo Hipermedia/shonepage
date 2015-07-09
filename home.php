@@ -14,8 +14,15 @@
 
 get_header(); ?>
 
-<section role="main" class="portada">
+<section>
     <h2>Portada SH One Page Dev</h2>
-</section><!-- .portada -->
+
+    <a href="javascript:void(0)" class="btn btn-default">Default</a>
+	<a href="javascript:void(0)" class="btn btn-primary">Primary</a>
+	<a href="javascript:void(0)" class="btn btn-success">Success</a>
+	<a href="javascript:void(0)" class="btn btn-info">Info</a>
+	<a href="javascript:void(0)" class="btn btn-warning">Warning</a>
+	<a href="javascript:void(0)" class="btn btn-danger">Danger</a>
+	</section>
 
 <?php get_footer(); ?>

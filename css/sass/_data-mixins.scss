@@ -4,7 +4,7 @@
 
 /* Fuentes
 ------------*/
-$global-font: sans-serif;
+$global-font: "Open Sans";
 
 /* Colores
 ------------*/
@@ -28,7 +28,7 @@ $smaller-width: 500px;
 /* Mixins
 /*-----------------------------------------------*/
 
-@mixin rounded($radius: 0.5em) {
+@mixin redondea($radius: 0.5em) {
   -webkit-border-radius: $radius;
   -moz-border-radius: $radius;
   border-radius: $radius;
@@ -39,6 +39,12 @@ $smaller-width: 500px;
 	   -moz-transition: all $tiempo ease-in-out;
 		 -o-transition: all $tiempo ease-in-out;
 		    transition: all $tiempo ease-in-out; 
+}
+@mixin color-placeholder( $color-ph: #888 ) {
+	::-webkit-input-placeholder { color: $color-ph; }
+	:-moz-placeholder { /* Firefox 18- */   opacity: 1; color: $color-ph;  }
+	::-moz-placeholder {  /* Firefox 19+ */  opacity: 1;   color: $color-ph;  }
+	:-ms-input-placeholder {  color: $color-ph;  }
 }
 
 @mixin fancy-box-shadow {

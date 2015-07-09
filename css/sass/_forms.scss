@@ -48,72 +48,6 @@ input#searchsubmit {
 	display: none;
 }
 
-
-/* SH Forms */
-.psh-form input[type="text"],
-.psh-form input[type="email"],
-.psh-form input[type="password"],
-.psh-form input[type="number"],
-.psh-form select,
-.psh-form textarea {
-	background: #fff;
-	border: 1px solid #eee;
-	-moz-border-radius: 5px;
-	border-radius: 4px;
-	-ms-border-radius: 4px;
-	-moz-border-radius: 4px;
-	-webkit-border-radius: 4px;
-	-khtml-border-radius: 4px;
-	-webkit-box-shadow: inset 1px 1px 1px 1px rgba(00, 00, 00, .2);
-	-moz-box-shadow: inset 1px 1px 2px 2px rgba(00, 00, 00, .2);
-	box-shadow: inset 1px 1px 1px 1px rgba(00, 00, 00, .3);     
-	position: relative;
-	padding: 8px 5%;
-	text-indent: 10px;
-	width: 90%;
-	color: #666;
-	font-size: 1em;
-}
-.psh-form select {
-	width: 20%;
-	padding: 8px 2% 8px 0;
-}
-
-.psh-form input[type="number"] {  width: 10%; margin: 0 6px;  }
-.psh-form label {
-	font-size: 1em;
-	padding: 8px 0;
-	display: block;
-	font-weight: bold;
-}
-
-.psh-form p { margin-bottom:10px; }
-
-.psh-form input[type="submit"], .psh-form button {
-	border: none;
-	border-radius: 4px;
-	-ms-border-radius: 4px;
-	-moz-border-radius: 4px;
-	-webkit-border-radius: 4px;
-	-khtml-border-radius: 4px;
-	-webkit-box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
-	-moz-box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
-	box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
-	cursor: pointer;
-	font-size: 18px;
-	text-shadow: 0 -1px 0 rgba(0,0,0,0.3);
-	font-weight: bold;
-	width: 100%;
-	padding: 8px 5%;
-	margin: 20px auto 10px;
-	display:block;
-	clear:both;
-}
-
-.psh-form input[type="submit"]:hover {
-
-}
-
 /* FORM ERRORS */
 .error {
 	padding: .8em 1em !important;
@@ -128,13 +62,6 @@ input#searchsubmit {
 	font-size: .8em;
 	font-weight:normal;
 	   
-}
-
-.spacer {
-	display: inline-block;
-	clear: both;
-	width: 100%;
-	height: 1em;	
 }
 
 /* =CF7 */
@@ -162,7 +89,6 @@ form.suscripcion-boletin textarea,
 }
 
 form.wpcf7-form p, form.suscripcion-boletin p { margin-bottom: 1em; }
-
 form.suscripcion-boletin input[type="submit"],
 form.wpcf7-form input[type="submit"] {
 	background: #444;
@@ -194,16 +120,9 @@ form.wpcf7-form input[type="submit"]:hover {
 }
 
 /* color de las marcas de agua o input placeholders */
-::-webkit-input-placeholder { color: #888; }
-:-moz-placeholder { /* Firefox 18- */   opacity: 1; color: #888;  }
-::-moz-placeholder {  /* Firefox 19+ */  opacity: 1;   color: #888;  }
-:-ms-input-placeholder {  color: #888;  }
+@include color-placeholder( #888 );
 
 
-/* color de las marcas de agua o input placeholders */
-::-webkit-input-placeholder { color: #888; }
-:-moz-placeholder { /* Firefox 18- */   opacity: 1; color: #888;  }
-::-moz-placeholder {  /* Firefox 19+ */  opacity: 1;   color: #888;  }
-:-ms-input-placeholder {  color: #888;  }
+
 
 

@@ -1,23 +1,26 @@
 <?php
-/**
- * The template for displaying the footer.
- */
+/* Footer
+ ----------------------------------*/
 ?>
+
 </main>
 
-<footer class="footer" role="footer">	
-         
-    <div class="creditos" class="group">
-		<a class="firma-sh" href="http://www.solucioneshipermedia.com/">Soluciones Hipermedia | Desarrollo web</a>
-	</div><!-- #creditos -->  
+<footer class="Footer">	
+    
+    <section class="u-contenedor">
+    	
+    	<aside class="Footer-creditos">
+    		<a class="Footer-firmaSH" href="http://www.solucioneshipermedia.com/">Soluciones Hipermedia | Desarrollo web</a>
+    	</aside>
+    </section>     
 
 </footer>
 
 <!-- JS personalizados del tema -->
-<?php waypoints(); ?>
-<?php themejs(); ?>
-<?php bootstrap(); ?>
-<?php wp_footer(); ?>
+<?php waypoints(); // Librería que detecta puntos en el scroll de pantalla ?>
+<?php bootstrap(); // framework Bootsrap ?>
+<?php //bootstrapMaterial(); // framework Bootsrap ?>
+<?php themejs(); // Los scripts personalizados del tema ?>
 
 </body>
 </html>

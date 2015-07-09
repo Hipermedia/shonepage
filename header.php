@@ -39,11 +39,9 @@
 <!-- CSS
   ================================================== -->
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
-<!-- Font Awesome -->
-<link href="<?php plantilla_url(); ?>/inc/font-awesome/css/font-awesome.css" rel="stylesheet">
-<!-- Favicons
+<!-- Favicon
   ================================================== -->
-<link href=" <?php print_ot('favicon', get_plantilla_url().'/images/favicon.png'); ?>" rel="icon" type="image/x-icon" />
+<link href=" <?php print_ot('favicon', get_plantilla_url().'/images/favicon.ico'); ?>" rel="icon" type="image/x-icon" />
 <!-- pingback
   ================================================== -->
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />

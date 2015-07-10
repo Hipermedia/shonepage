@@ -72,6 +72,17 @@ function get_plantilla_url() {
 
 /* BLOQUES
  * ------------------------------------------------------------- */
+
+
+/* Navegación
+ * ------------------------------------------------------------- */
+/* CLASSIC; navegación principal */
+function classicNav() {
+	get_template_part( 'inc/nav/classic-nav');
+}
+
+/* Redes sociales
+ * ------------------------------------------------------------- */
 /* CLASSIC; social link buttons */
 function classicSocialShare() {
 	get_template_part( 'inc/social/classic-sociallinks');

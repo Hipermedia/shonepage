@@ -24,7 +24,7 @@
 .social a i.fa-twitter-square, #social-contacto a i.fa-twitter-square,
 .social a i.fa-youtube-square, #social-contacto a i.fa-youtube-square,
 .social a i.fa-google-plus-square, #social-contacto a i.fa-google-plus-square {
-	color: #c3c3c3;	
+	color: $social-btn-color;	
 	font-size: 2.6em;
 }
 .social a:hover i.fa-facebook-square, #social-contacto a:hover i.fa-facebook-square { color: #3B5998; }

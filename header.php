@@ -57,18 +57,20 @@
 
 <header id="header" class="Header" role="banner" >
     <section class="Header-contenido">
+        
         <!-- Logo -->
         <a href="<?php inicio_url(); ?>" id="header-logo" class="Header-logo  animated flipInX">
             <img src="<?php print_ot('logo', get_plantilla_url().'/images/logo.png'); ?>" alt="<?php bloginfo('name'); ?>">
         </a>
+        
         <!-- Redes sociales -->
-        <?php classicSocialShare(); ?>
+        <?php primalSocialShare(); ?>
         
         <!-- Formulario de búsqueda [Catacterística superior] -->
         <?php // get_search_form(); ?>
         
         <!-- Menú principal -->  
-        <?php classicNav(); ?>
+        <?php primalNav(); ?>
         
     </section>
 </header>

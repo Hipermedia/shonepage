@@ -1,0 +1,112 @@
+/*------------------------------------------------*/
+/*-----------------[NAV]-----------------------*/
+/*------------------------------------------------*/
+
+/* MainNavClasico */
+
+.primalMainNav {
+	display: block;
+	float: right;
+	margin: .5rem 1% 0;
+	max-width: 66%;
+	position: absolute;
+	right: 0;
+	top: 4rem;
+	@include transicion();
+	
+	@media (max-width: $tablet-width) {
+		width: 100%;
+		max-width: 100%;
+		position: relative;
+		display:inline-block;
+		top: 0;
+	}
+	
+	/* Clase que se le agrega al nav cuando se hace scroll */
+	&.tiny { 
+	  top: .5rem;
+
+	  a { color: $main-color; background: $main-color-text; }
+	  a:hover { color: $main-color-text; background: $main-color; }
+	  .current_page_item > a { color: $main-color; }
+	  .current_page_item > a:hover { color: $main-color-text; }
+	}
+	
+	ul {
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+
+		@media (max-width: $tablet-width) {
+			margin: 0;
+			padding: 1rem 0 0;
+			width: 100% !important;
+			display: block;
+			list-style: none;
+			font-size: 1.1em;
+		}
+		&.activo {
+			@media (max-width: $tablet-width) {
+				display: none;
+			}
+		}
+	}
+	li {
+		float: left;
+		position: relative;
+
+		@media (max-width: 768px) {
+			width: 100%;
+			display: block;
+			text-align: center;
+			border-bottom: #CCC 1px solid;
+		}
+	}
+	a {
+		color: $nav-text-color;
+		background-color: $nav-bg-text-color;
+		display: block;
+		line-height: 2em;
+		padding: 0px .8em;
+		text-decoration: none;
+		font-size: 1.15rem;
+		@include redondea(4px);
+		@include transicion(0.25s);
+
+		@media (max-width: 768px) {
+			height: 2.625em;
+		}
+	}
+	a:hover,
+	a:focus {
+		background: $nav-bg-text-color-hover; /* Show a solid color for older browsers */
+		color: $nav-text-color-hover;		
+	}
+	a.active {
+		font-weight: bold;
+	}
+
+	/* Clase del botón del menú que se muestra en pantallas pequeñas */
+	.toggle-nav {
+	    display:none;
+
+	    @media (max-width: $tablet-width) {
+	        padding:.5rem;
+	        display:block;
+	        margin: 0 auto;
+	        max-width: 280px;
+	        text-align: center;
+	        box-shadow:0px 1px 1px rgba(0,0,0,0.15);
+	        background:#444;
+	        color:#fff;
+	        font-size:1.25rem;
+	        text-transform: uppercase;
+	        transition:color linear 0.15s;
+	    }
+	}
+	.toggle-nav:hover, .toggle-nav.activo {
+        text-decoration:none;
+		background: #ccc;
+        color: #444;
+    }
+}

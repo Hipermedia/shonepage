@@ -76,16 +76,24 @@ function get_plantilla_url() {
 
 /* Navegación
  * ------------------------------------------------------------- */
-/* CLASSIC; navegación principal */
-function classicNav() {
-	get_template_part( 'inc/nav/classic-nav');
+/* PRIMAL; navegación principal */
+function primalNav() {
+	get_template_part( 'inc/nav/primal-nav');
 }
+
+/* Cover
+ * ------------------------------------------------------------- */
+/* PRIMAL; cover */
+function primalCover() {
+	get_template_part( 'inc/cover/primal-cover');
+}
+
 
 /* Redes sociales
  * ------------------------------------------------------------- */
-/* CLASSIC; social link buttons */
-function classicSocialShare() {
-	get_template_part( 'inc/social/classic-sociallinks');
+/* PRIMAL; social link buttons */
+function primalSocialShare() {
+	get_template_part( 'inc/social/primal-sociallinks');
 }
 /* ANLI; social share buttons */
 function anliSocialShare() {
@@ -245,23 +253,6 @@ function shbase_page_menu_args( $args ) {
 }
 add_filter( 'wp_page_menu_args', 'shbase_page_menu_args' );
 
-/**
- * Register our sidebars and widgetized areas. Also register the default Epherma widget.
- *
- * @since SH Base 1.0
- */
-function shbase_widgets_init() {
-
-	register_sidebar( array(
-		'name' => __( 'Main Sidebar', 'shbase' ),
-		'id' => 'sidebar-1',
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => "</div>",
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
-	) );
-}
-add_action( 'widgets_init', 'shbase_widgets_init' );
 
 if ( ! function_exists( 'shbase_content_nav' ) ) :
 /**

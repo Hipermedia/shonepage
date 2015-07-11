@@ -5,16 +5,39 @@
 /* Fuentes
 ------------*/
 $global-font: "Open Sans";
+$main-font: "Open Sans";
+$support-font: "Open Sans";
+
 
 /* Colores
 ------------*/
-$body-bg: #efefef;
-$header-bg: #fff;
-$footer-bg: #fff;
+$body-bg: 				#efefef;
+$header-bg: 			#fff;
+$footer-bg: 			#fff;
 
-$text-color: #666666;
-$link-color: #0055A4;
-$link-hover-color: #2174BC;
+$link-color: 			#0054A8;
+$link-hover-color: 		#2B7CCE;
+$text-color:   			#212121;	// color de texto base, principalmete usado en parrafos
+$support-text-color: 	#727272;
+
+$main-color:        	#0054A8;	// color principal de la marca
+$main-color-dark:   	#002964;	
+$main-color-light:  	#2B7CCE;
+$main-color-text:   	#FFFFFF;	// color de texto en contraste con el color principal de la marca
+
+$support-color:     	#FF9800;	// color secundario de la marca
+
+$divider-color:        	#B6B6B6;	// color neutral, generalmente usado para divisiones
+
+$social-btn-color: 		#e3e3e3;	// color base de los botones sociales
+
+$nav-text-color:			#fff;		
+$nav-bg-text-color:			none;
+$nav-text-color-hover:		#fff;
+$nav-bg-text-color-hover: 	#0054A8;
+$nav-text-color-active:		#fff;
+$nav-bg-text-color-active:	none;
+
 
 /* Tamaños
 ------------*/

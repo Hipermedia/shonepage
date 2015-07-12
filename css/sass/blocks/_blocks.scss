@@ -1,0 +1,54 @@
+/*------------------------------------------------*/
+/*------------------[BLOCKS]----------------------*/
+/*------------------------------------------------*/
+
+.PrimalBlocks {
+	padding-top: 6rem;
+	
+	.PrimalBlocks-contenido {
+		// Responsive
+		@media (max-width: $desktop-width) {
+			padding: 1.5rem;
+		}
+		.PrimalBlocks-titulo {
+			color: $main-color-dark;
+		}
+		.PrimalBlocks-subtitulo {
+			margin: 0 0 3rem;
+		}
+		.PrimalBlocks-block {
+			display: block;
+			float: left;
+			width: 30.3333333%;
+			margin: 0 1.5% 3rem;	
+			padding: .75rem;
+			@include gray-fancy-box; 
+			background-color: #eaeaea;
+			text-align: center;
+			// Responsive
+			@media (max-width: $tablet-width) {
+				width: 44%;
+				margin: 0 3% 3rem;
+			}
+			@media (max-width: $smaller-width) {
+				width: 100%;
+				margin: 0 0 3rem;
+			}
+			.PrimalBlocks-blockFigure {
+				// ...
+			}
+			.PrimalBlocks-blockTitulo {
+				// ...
+			}
+			.PrimalBlocks-blockSubtitulo {
+				// ...
+			}
+			.PrimalBlocks-blockDescripcion {
+				// ...
+			}
+			.PrimalBlocks-blockAction {
+				// ...
+			}
+		}
+	}
+}

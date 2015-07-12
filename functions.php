@@ -88,6 +88,12 @@ function primalCover() {
 	get_template_part( 'inc/cover/primal-cover');
 }
 
+/* Bloques
+ * ------------------------------------------------------------- */
+/* PRIMAL; bloques */
+function primalBloques() {
+	get_template_part( 'inc/blocks/primal-blocks');
+}
 
 /* Redes sociales
  * ------------------------------------------------------------- */

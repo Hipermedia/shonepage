@@ -15,7 +15,10 @@
 get_header(); ?>
 
 	<!-- Cover -->
-	<?php primalCover(); // Cover con imágen de fondo, imagen pricnipal y títulos ?>
+	<?php primalCover(); // Cover con imágen de fondo, imagen principal y títulos ?>
+	
+	<!-- Bloques -->
+	<?php primalBloques(); //  Bloques de contenido primordiales ?>
 
 
 <?php get_footer(); ?>

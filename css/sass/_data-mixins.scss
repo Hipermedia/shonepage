@@ -29,13 +29,13 @@ $support-color:     	#FF9800;	// color secundario de la marca
 
 $divider-color:        	#B6B6B6;	// color neutral, generalmente usado para divisiones
 
-$social-btn-color: 		#e3e3e3;	// color base de los botones sociales
+$social-btn-color: 		#666666;	// color base de los botones sociales
 
-$nav-text-color:			#fff;		
+$nav-text-color:			$main-color;		
 $nav-bg-text-color:			none;
-$nav-text-color-hover:		#fff;
-$nav-bg-text-color-hover: 	#0054A8;
-$nav-text-color-active:		#fff;
+$nav-text-color-hover:		$main-color-text;
+$nav-bg-text-color-hover: 	$main-color;
+$nav-text-color-active:		$main-color;
 $nav-bg-text-color-active:	none;
 
 
@@ -44,24 +44,24 @@ $nav-bg-text-color-active:	none;
 $header-height: 120px;
 $desktop-width: 1100px;
 $tablet-width: 768px;
-$smaller-width: 500px;
+$smaller-width: 560px;
 
 
 /*-----------------------------------------------*/
 /* Mixins
 /*-----------------------------------------------*/
-
+// Para bordes redondos
 @mixin redondea($radius: 0.5em) {
   -webkit-border-radius: $radius;
   -moz-border-radius: $radius;
   border-radius: $radius;
 }
-
-@mixin transicion($tiempo: 0.5s) {
-	-webkit-transition: all $tiempo ease-in-out;
-	   -moz-transition: all $tiempo ease-in-out;
-		 -o-transition: all $tiempo ease-in-out;
-		    transition: all $tiempo ease-in-out; 
+// Treansiciones
+@mixin transicion($tiempo: 0.5s, $efecto: 'ease-in-out') {
+	-webkit-transition: all $tiempo $efecto;
+	   -moz-transition: all $tiempo $efecto;
+		 -o-transition: all $tiempo $efecto;
+		    transition: all $tiempo $efecto; 
 }
 @mixin color-placeholder( $color-ph: #888 ) {
 	::-webkit-input-placeholder { color: $color-ph; }
@@ -69,20 +69,6 @@ $smaller-width: 500px;
 	::-moz-placeholder {  /* Firefox 19+ */  opacity: 1;   color: $color-ph;  }
 	:-ms-input-placeholder {  color: $color-ph;  }
 }
-
-@mixin fancy-box-shadow {
-	box-shadow: 0px 0px 1px 1px white inset, 0px 23px 21px -33px #000;
-}
-
-@mixin gray-fancy-box {
-	@include rounded;
-	background: #eee;
-	border:1px solid #d8d8d8;
-	padding: 1em;
-	box-shadow: 0px 0px 1px 1px white inset;
-	@include fancy-box-shadow;
-}
-
 @mixin ul-base {
 	list-style-type: none;
 	padding: 0px;
@@ -90,6 +76,21 @@ $smaller-width: 500px;
 	width: 100%;
 	display: inline-block;
 }
+@mixin fancy-box-shadow {
+	box-shadow: 0px 0px 1px 1px white inset, 0px 23px 21px -33px #000;
+}
+
+
+@mixin gray-fancy-box {
+	@include redondea;
+	background: #eee;
+	border:1px solid #d8d8d8;
+	padding: 1em;
+	box-shadow: 0px 0px 1px 1px white inset;
+	@include fancy-box-shadow;
+}
+
+
 
 /*-----------------------------------------------*/
 /* Funciones */

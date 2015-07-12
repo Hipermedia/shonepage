@@ -6,7 +6,7 @@ Author URI: http://www.solucioneshipermedia.com/
 Description: Tema base Wordpress para desarrollo de proyectos de Soluciones Hipermedia
 Version: 1.1
 Text Domain: shbase
-*/
+*/ 
 
 /* Iniciales
 ------------------------------------------*/
@@ -36,6 +36,7 @@ Text Domain: shbase
 /* Bloques 
 ------------------------------------------*/
 @import "blocks/_cover.scss";
+@import "blocks/_blocks.scss";
 @import "blocks/_nav.scss";
 @import "blocks/_redes_sociales.scss";
 

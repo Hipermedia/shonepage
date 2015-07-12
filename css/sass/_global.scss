@@ -124,6 +124,11 @@ h1, h2, h3, h4, h5, h6 {
 
 /* PAGINACIÓN 
 ------------------------------------------------------------ */
+figure {
+
+	img { width: 100%; }
+}
+
 #numbered-pagination {
 	display: block;
 	clear: both;

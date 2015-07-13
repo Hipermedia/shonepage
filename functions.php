@@ -45,7 +45,7 @@ add_filter( 'login_redirect', 'sh_login_redirect', 10, 3 );
 if( function_exists('acf_add_options_page') ) {
 	
 	acf_add_options_page(array(
-		'page_title' 	=> 'Configuracion del tema',
+		'page_title' 	=> 'Configuración',
 		'menu_title'	=> 'Configuración',
 		'menu_slug' 	=> 'theme-general-settings',
 		'capability'	=> 'edit_posts',
@@ -53,29 +53,34 @@ if( function_exists('acf_add_options_page') ) {
 	));
 
 	acf_add_options_sub_page(array(
-		'page_title' 	=> 'Configuración general',
-		'menu_title'	=> 'General',
+		'title' 	=> 'General',
 		'parent_slug'	=> 'theme-general-settings',
 	));
 
 	acf_add_options_sub_page(array(
-		'page_title' 	=> 'Configuración de contacto',
-		'menu_title'	=> 'Contacto',
+		'title' 	=> 'Contacto',
 		'parent_slug'	=> 'theme-general-settings',
 	));
 	
 	acf_add_options_sub_page(array(
-		'page_title' 	=> 'Configuración de portada',
-		'menu_title'	=> 'Portada',
+		'title' 	=> 'Portada',
 		'parent_slug'	=> 'theme-general-settings',
 	));
 
 	acf_add_options_sub_page(array(
-		'page_title' 	=> 'Configuración de bloques',
-		'menu_title'	=> 'Bloques',
+		'title' 	=> 'Bloques',
 		'parent_slug'	=> 'theme-general-settings',
 	));
-	
+
+	acf_add_options_sub_page(array(
+		'title'	=> 'Texto',
+		'parent_slug'	=> 'theme-general-settings',
+	));
+
+	acf_add_options_sub_page(array(
+		'title' 	=> 'Testimonios',
+		'parent_slug'	=> 'theme-general-settings',
+	));	
 }
 
 

@@ -7,57 +7,31 @@
 	<!-- Contenedor -->
 	<div class="PrimalBlocks-contenido u-contenedor">
 		<!-- Títulos de la sección -->
-		<h1 class="PrimalBlocks-titulo">Título de la sección</h1>
+		<h1 class="PrimalBlocks-titulo"><?php the_field('tituloBloques', 'option'); ?></h1>
 		<h2 class="PrimalBlocks-subtitulo">
-			Sección de bloques de contenido estilo PRIMAL
+			<?php the_field('subtituloBloques', 'option'); ?>
 		</h2>
-		<!-- bloque -->
-		<div class="PrimalBlocks-block">
-			<figure class="PrimalBlocks-blockFigure">
-				<img src="http://localhost/onepage.hipermedia.in/wp-content/uploads/gears-compressor.png" alt="">
-			</figure>
-			<h3 class="PrimalBlocks-blockTitulo">Título del bloque</h3>
-			<h4 class="PrimalBlocks-blockSubtitulo">Subtítulo del bloque</h4>
-			<p class="PrimalBlocks-blockDescripcion">
-				Descripción lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, nostrum.
-			</p>
-			<a href="" class="PrimalBlocks-blockAction btn btn-default btn-raised">
-				<i class="fa fa-plus"></i>
-				 Ver más
-			</a>
-		</div>
-		<!-- PLACE HOLDER QUITAME CUANDO TERMINES -->
-		<!-- bloque -->
-		<div class="PrimalBlocks-block">
-			<figure class="PrimalBlocks-blockFigure">
-				<img src="http://localhost/onepage.hipermedia.in/wp-content/uploads/gears-compressor.png" alt="">
-			</figure>
-			<h3 class="PrimalBlocks-blockTitulo">Título del bloque</h3>
-			<h4 class="PrimalBlocks-blockSubtitulo">Subtítulo del bloque</h4>
-			<p class="PrimalBlocks-blockDescripcion">
-				Descripción lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, nostrum.
-			</p>
-			<a href="" class="PrimalBlocks-blockAction btn btn-default btn-raised">
-				<i class="fa fa-plus"></i>
-				 Ver más
-			</a>
-		</div>
-		<!-- bloque -->
-		<div class="PrimalBlocks-block">
-			<figure class="PrimalBlocks-blockFigure">
-				<img src="http://localhost/onepage.hipermedia.in/wp-content/uploads/gears-compressor.png" alt="">
-			</figure>
-			<h3 class="PrimalBlocks-blockTitulo">Título del bloque</h3>
-			<h4 class="PrimalBlocks-blockSubtitulo">Subtítulo del bloque</h4>
-			<p class="PrimalBlocks-blockDescripcion">
-				Descripción lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, nostrum.
-			</p>
-			<a href="" class="PrimalBlocks-blockAction btn btn-default btn-raised">
-				<i class="fa fa-plus"></i>
-				 Ver más
-			</a>
-		</div>
-		<!-- PLACE HOLDER QUITAME CUANDO TERMINES -->
+		
+		<?php if( have_rows('bloquesBloques', 'option') ): ?>
+			<?php while( have_rows('bloquesBloques', 'option') ): the_row(); ?>
+				
+				<!-- bloque -->
+				<div class="PrimalBlocks-block">
+					<figure class="PrimalBlocks-blockFigure">
+						<img src="<?php the_sub_field('imagen'); ?>" alt="<?php the_sub_field('titulo'); ?>">
+					</figure>
+					<h3 class="PrimalBlocks-blockTitulo"><?php the_sub_field('titulo'); ?></h3>
+					<h4 class="PrimalBlocks-blockSubtitulo"><?php the_sub_field('subtitulo'); ?></h4>
+					<p class="PrimalBlocks-blockDescripcion">
+						<?php the_sub_field('descripcion'); ?>
+					</p>
+					<a href="" class="PrimalBlocks-blockAction btn btn-default btn-raised">
+						<i class="fa fa-plus"></i>
+						 <?php the_sub_field('accion'); ?>
+					</a>
+				</div>
 
+			<?php endwhile; ?>
+		<?php endif; ?>
 	</div>
 </section>

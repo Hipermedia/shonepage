@@ -57,7 +57,7 @@ $smaller-width: 560px;
   border-radius: $radius;
 }
 // Treansiciones
-@mixin transicion($tiempo: 0.5s, $efecto: 'ease-in-out') {
+@mixin transicion($tiempo: 0.5s, $efecto: ease-in-out) {
 	-webkit-transition: all $tiempo $efecto;
 	   -moz-transition: all $tiempo $efecto;
 		 -o-transition: all $tiempo $efecto;

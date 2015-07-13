@@ -55,13 +55,7 @@ if( function_exists('acf_add_options_page') ) {
 	acf_add_options_sub_page(array(
 		'title' 	=> 'General',
 		'parent_slug'	=> 'theme-general-settings',
-	));
-
-	acf_add_options_sub_page(array(
-		'title' 	=> 'Contacto',
-		'parent_slug'	=> 'theme-general-settings',
-	));
-	
+	));	
 	acf_add_options_sub_page(array(
 		'title' 	=> 'Portada',
 		'parent_slug'	=> 'theme-general-settings',
@@ -81,6 +75,10 @@ if( function_exists('acf_add_options_page') ) {
 		'title' 	=> 'Testimonios',
 		'parent_slug'	=> 'theme-general-settings',
 	));	
+	acf_add_options_sub_page(array(
+		'title' 	=> 'Contacto',
+		'parent_slug'	=> 'theme-general-settings',
+	));
 }
 
 

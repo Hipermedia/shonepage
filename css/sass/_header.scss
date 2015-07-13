@@ -25,12 +25,17 @@
 	}
 
 	@media (max-width: $tablet-width) {
-		position: relative;		
+		position: relative;	
+		height: auto;	
 	}
 
 	&--tiny {
 		height: 60px;
 		background: $header-bg;
+
+		@media (max-width: $tablet-width) {
+			height: auto;
+		}
 	}
 	
 	.Header-contenido {
@@ -69,6 +74,11 @@
 				}
 				&.tiny {
 					max-width: 144px;
+
+					@media (max-width: $tablet-width) {
+						height: auto;
+						max-width: 320px;
+					}
 				}
 			}
 		}

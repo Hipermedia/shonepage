@@ -18,13 +18,19 @@
 		width: 100%;
 		max-width: 100%;
 		position: relative;
-		display:inline-block;
+		display: block;
 		top: 0;
+		padding-bottom: 1.5rem;
 	}
 	
 	/* Clase que se le agrega al nav cuando se hace scroll */
 	&.tiny { 
 	  top: .5rem;
+		
+		@media (max-width: $tablet-width) {
+			top: 0;
+		}
+
 
 	  a { color: $main-color; background: $main-color-text; }
 	  a:hover { color: $main-color-text; background: $main-color; }

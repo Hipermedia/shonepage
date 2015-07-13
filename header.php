@@ -62,8 +62,6 @@
         <a href="<?php inicio_url(); ?>" id="header-logo" class="Header-logo  animated flipInX">
             <img src="<?php the_field('logo', 'option'); ?>" alt="<?php bloginfo('name'); ?>">
         </a>
-        
-        
 
         <!-- Redes sociales -->
         <?php primalSocialShare(); ?>

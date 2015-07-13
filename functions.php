@@ -39,6 +39,46 @@ function sh_login_redirect( $redirect_to, $request, $user  )
 }
 add_filter( 'login_redirect', 'sh_login_redirect', 10, 3 );
 
+/* ADVANCE CUSTOM FIELDS
+------------------------------------------------------------ */
+/* Options Page */
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page(array(
+		'page_title' 	=> 'Configuracion del tema',
+		'menu_title'	=> 'Configuración',
+		'menu_slug' 	=> 'theme-general-settings',
+		'capability'	=> 'edit_posts',
+		// 'redirect'		=> false
+	));
+
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Configuración general',
+		'menu_title'	=> 'General',
+		'parent_slug'	=> 'theme-general-settings',
+	));
+
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Configuración de contacto',
+		'menu_title'	=> 'Contacto',
+		'parent_slug'	=> 'theme-general-settings',
+	));
+	
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Configuración de portada',
+		'menu_title'	=> 'Portada',
+		'parent_slug'	=> 'theme-general-settings',
+	));
+
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Configuración de bloques',
+		'menu_title'	=> 'Bloques',
+		'parent_slug'	=> 'theme-general-settings',
+	));
+	
+}
+
+
 /* OPTION TREE
 ------------------------------------------------------------- */
 /* Imprime una variable de OT; valida que exista la función y permite imprimir un valor por defecto si el campo está vacio  */

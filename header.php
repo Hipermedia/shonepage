@@ -41,7 +41,7 @@
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 <!-- Favicon
   ================================================== -->
-<link href=" <?php print_ot('favicon', get_plantilla_url().'/images/favicon.ico'); ?>" rel="icon" type="image/x-icon" />
+<link href="<?php the_field('favicon', 'option'); ?>" rel="icon" type="image/x-icon" />
 <!-- pingback
   ================================================== -->
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
@@ -60,9 +60,11 @@
         
         <!-- Logo -->
         <a href="<?php inicio_url(); ?>" id="header-logo" class="Header-logo  animated flipInX">
-            <img src="<?php print_ot('logo', get_plantilla_url().'/images/logo.png'); ?>" alt="<?php bloginfo('name'); ?>">
+            <img src="<?php the_field('logo', 'option'); ?>" alt="<?php bloginfo('name'); ?>">
         </a>
         
+        
+
         <!-- Redes sociales -->
         <?php primalSocialShare(); ?>
         

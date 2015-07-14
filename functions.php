@@ -81,21 +81,6 @@ if( function_exists('acf_add_options_page') ) {
 	));
 }
 
-
-/* OPTION TREE
-------------------------------------------------------------- */
-/* Imprime una variable de OT; valida que exista la función y permite imprimir un valor por defecto si el campo está vacio  */
-function print_ot($variable, $defecto) { 
-  if (function_exists ('ot_get_option')) {
-        	if (ot_get_option ($variable) != '') { echo ot_get_option ($variable); } else { echo $defecto; } 
-  } else { echo 'No esta activado OT'; }
-}
-/** Regresa una variable de OT; valida que exista la función y permite imprimir un valor por defecto si el campo está vacio  */
-function get_ot($variable) { 
-  if (function_exists ('ot_get_option')) {
-        	if (ot_get_option ($variable) != '') { return ot_get_option ($variable); } else { return ''; } 
-  } 
-}
 /** Imprime el url del home  */
 function inicio_url() {
 	print get_home_url();
@@ -116,7 +101,6 @@ function get_plantilla_url() {
 /* BLOQUES
  * ------------------------------------------------------------- */
 
-
 /* Navegación
  * ------------------------------------------------------------- */
 /* PRIMAL; navegación principal */
@@ -134,8 +118,15 @@ function primalCover() {
 /* Bloques
  * ------------------------------------------------------------- */
 /* PRIMAL; bloques */
-function primalBloques() {
+function primalBlocks() {
 	get_template_part( 'inc/blocks/primal-blocks');
+}
+
+/* Testimonios
+ * ------------------------------------------------------------- */
+/* PRIMAL; testimonios */
+function primalTestimony() {
+	get_template_part( 'inc/testimony/primal-testimony');
 }
 
 /* Redes sociales

@@ -126,6 +126,13 @@ function sauteBlocks() {
 	get_template_part( 'inc/blocks/saute-blocks');
 }
 
+/* Texto
+ * ------------------------------------------------------------- */
+/* PRIMAL; texto */
+function primalText() {
+	get_template_part( 'inc/text/primal-text');
+}
+
 /* Testimonios
  * ------------------------------------------------------------- */
 /* PRIMAL; testimonios */

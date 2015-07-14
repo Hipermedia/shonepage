@@ -121,6 +121,10 @@ function primalCover() {
 function primalBlocks() {
 	get_template_part( 'inc/blocks/primal-blocks');
 }
+/* SAUTE; bloques */
+function sauteBlocks() {
+	get_template_part( 'inc/blocks/saute-blocks');
+}
 
 /* Testimonios
  * ------------------------------------------------------------- */

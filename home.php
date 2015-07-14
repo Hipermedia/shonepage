@@ -19,6 +19,7 @@ get_header(); ?>
 	
 	<!-- Bloques -->
 	<?php primalBlocks(); //  Bloques de contenido primordiales ?>
+	<?php sauteBlocks();  //  Bloques de contenido salteados ?>
 
 	<!-- Testimonios -->
 	<?php primalTestimony(); //  Bloques de contenido primordiales ?>

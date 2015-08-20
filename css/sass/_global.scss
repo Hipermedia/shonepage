@@ -17,6 +17,7 @@ body {
 	line-height: 1.5em; /* 24px */
 	background: $body-bg;
 	margin: 0;
+	font-size: 1rem;
 }
 /* Links */
 a {
@@ -71,12 +72,22 @@ h1, h2, h3, h4, h5, h6 {
 /* = Contenido
 ----------------------------------------------- */
 .contenido {
+	
+	h1, h2 {
+		font-size: 2rem;
+		clear: both;
+	}
 
 	blockquote {
 		font-family: Georgia, serif !important;
-		font-size: 1.8rem;
+		font-size: 1.25rem;
 		font-style: italic;
 		color: #929292;
+		margin: 0;
+		border: none;
+		padding: .5rem 2rem;
+		clear: both;
+		line-height: 1.5;
 
 		p {
 			margin: 0;
@@ -90,7 +101,7 @@ h1, h2, h3, h4, h5, h6 {
 		padding-right: 1rem;
 		line-height: 0.8;
 		overflow: hidden;
-		height: 3rem;
+		height: auto;
 	}
 }
 

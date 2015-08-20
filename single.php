@@ -5,22 +5,21 @@
 
 get_header(); ?>
 
-<section class="content">
+<section class="u-contenedor contenido Post">
 
 	<?php while ( have_posts() ) : the_post(); ?>
-	     	<article class="single">
-				
-				<h1 class="title"><?php the_title(); ?></h1>
+	    <article>				
+			<h1 class="title"><?php the_title(); ?></h1>
 			
-				<?php the_content(); ?>	
+			<?php the_content(); ?>	
 			    
-				<?php anliSocialShare(); ?>
+			<?php anliSocialShare(); ?>
 	   
-		</article><!-- .single ?> -->
+		</article>
 	<?php endwhile; // end of the loop. ?>
 	
-	<?php get_sidebar(); ?>
+	<?php // get_sidebar(); ?>
 
-</section><!-- .content -->
+</section>
 
 <?php get_footer(); ?>

@@ -12,7 +12,7 @@
 	background: none;
 	margin: 0 auto;
 	z-index: 99;
-	position: fixed;
+	position: relative; // Cambiar de relative a fixed si se quiere integrar el heade ral contenido
 	left: 0;
 	right: 0;
 	@include transicion();

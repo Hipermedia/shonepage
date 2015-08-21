@@ -71,11 +71,12 @@ h1, h2, h3, h4, h5, h6 {
 
 /* = Contenido
 ----------------------------------------------- */
-.contenido {
+.u-contenido {
 	
 	h1, h2 {
 		font-size: 2rem;
 		clear: both;
+		margin-bottom: 1.25rem;
 	}
 
 	blockquote {
@@ -103,6 +104,13 @@ h1, h2, h3, h4, h5, h6 {
 		overflow: hidden;
 		height: auto;
 	}
+
+	ul, ol {
+		margin-bottom: 1.5rem;
+	}
+
+	/* WP Forms */
+
 }
 
 .galeria {
@@ -274,6 +282,82 @@ object {
 	background: #f7f7f7;
 }
 
+
+/* =Gallery
+----------------------------------------------- */
+.gallery {
+	
+	.gallery-item {
+		
+		@media (max-width: $tablet-width ) {
+			width: 50% !important;
+			padding: 1.5rem;
+		}
+
+		@media (max-width: 450px ) {
+			width: 100% !important;
+			padding: 1.5rem;
+		}
+		
+		.gallery-caption {
+			font-size: 1rem;
+			width: 90%;
+			font-style: italic;
+			margin: 0 auto !important;
+		}
+
+		img {
+			border: none !important;
+			width: 90%;
+		}
+
+	}
+	
+}
+
+
+/* =Tables
+----------------------------------------------- */
+table {
+	width: 100%;
+  	max-width: 100%;
+  	margin-bottom: 20px;
+	
+	> thead > tr > th,
+	> tbody > tr > th,
+	> tfoot > tr > th,
+	> thead > tr > td,
+	> tbody > tr > td,
+	> tfoot > tr > td {
+		padding: 8px;
+		line-height: 1.42857143;
+		vertical-align: top;
+		border-top: 1px solid #ddd;
+	}
+
+	> thead > tr > th {
+	  vertical-align: bottom;
+	  border-bottom: 2px solid #ddd;
+	}
+
+	> caption + thead > tr:first-child > th,
+	> colgroup + thead > tr:first-child > th,
+	> thead:first-child > tr:first-child > th,
+	> caption + thead > tr:first-child > td,
+	> colgroup + thead > tr:first-child > td,
+	> thead:first-child > tr:first-child > td {
+	  border-top: 0;
+	}
+
+	> tbody + tbody {
+	  border-top: 2px solid #ddd;
+	}
+	table {
+	  background-color: #fff;
+	}
+}
+
+
 /* Author Info */
 #author-info {
 	font-size: 12px;
@@ -315,14 +399,9 @@ object {
 	margin: 5px 0 10px;
 }
 
-/* =Gallery
------------------------------------------------ */
 
-.format-gallery .gallery-thumb {
-	float: left;
-	display: block;
-	margin: .375em 1.625em 0 0;
-	max-width: 100%;
-}
+
+
+  
 
 

@@ -6,22 +6,28 @@
 
 get_header(); ?>
 
-<section class="content">
+<section class="u-contenedor">
 
 	<?php while ( have_posts() ) : the_post(); ?>
-
-		<article class="default-page">
+	   
+	    <article class="Page u-contenido">	
 			
-			<h1 class="title"><?php the_title(); ?></h1>
-			
+			<!-- Imágen destacada -->
+			<?php if ( has_post_thumbnail() ) : ?>
+				<figure class="Page-featuredImage">
+					<?php the_post_thumbnail( 'large' ); ?>
+				</figure>
+			<?php endif; ?>
+			<!-- Título del artículo -->
+			<h1 class="Page-title"><?php the_title(); ?></h1>
+			<!-- Contenido -->
 			<?php the_content(); ?>	
-		    
+			<!-- Compartir en redes sociales -->
 			<?php anliSocialShare(); ?>
-		   
-		</article><!-- .default-page ?> -->
-
+	   
+		</article>
 	<?php endwhile; // end of the loop. ?>
 
-</section><!-- .content -->
+</section>
 
 <?php get_footer(); ?>

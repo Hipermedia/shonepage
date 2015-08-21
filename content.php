@@ -8,22 +8,31 @@
  */
 ?>
 
-<article class="articulos">
-
-        <h2 class="titulo">
-            <a href="<?php the_permalink(); ?>" rel="bookmark" alt="Enlace a <?php the_permalink(); ?>"><?php the_title(); ?></a>
-        </h2>
-        <div class="meta">
-           <?php the_custom_meta(); ?>
-        </div>
+<article class="ArticuloH">
     
-    <div class="resumen">
-        <?php if ( has_post_thumbnail() ) { ?>
-            <figure class="thumb">
-                <?php the_post_thumbnail('medium'); ?>
-            </figure>
-        <?php } ?>
-        <?php the_excerpt(); ?>
-    </div><!-- .entry-summary -->
+    <!-- Imagen -->
+    <?php $tamañoContenedor = "is-full"; ?>
+    <?php if ( has_post_thumbnail() ) { ?>
+        <figure class="ArticuloH-thumbnail">
+            <?php the_post_thumbnail('thumbnail'); ?>
+        </figure>
+        <?php $tamañoContenedor = "is-shared" ?>
+    <?php } ?>
+    <!-- Contenido -->
+    <div class="ArticuloH-contenido <?php print($tamañoContenedor); ?>">
+        <header>
+            <h1 class="ArticuloH-titulo">
+                <a href="<?php the_permalink(); ?>" alt="<?php the_title(); ?>"><?php the_title(); ?></a>
+            </h1>
+        </header>
+        
+        <aside class="ArticuloH-meta">
+           <?php the_custom_meta(); ?>
+        </aside>       
+
+        <?php the_excerpt(); ?>            
+
+    </div>
+
     
 </article>

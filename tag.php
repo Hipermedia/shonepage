@@ -9,40 +9,43 @@
 
 get_header(); ?>
 
-<section class="content">
+	<section class="u-contenedor">
 
-	<?php if ( have_posts() ) : ?>
+		<?php if ( have_posts() ) : ?>
 
-		<!-- Título -->
-		<h1 class="titulo">
-			<?php printf( __( 'Tag Archives: %s', 'shbase' ), '<span>' . single_tag_title( '', false ) . '</span>' ); ?>
-		</h1>
-		
-		<!-- Descripción -->
-		<?php $tag_description = tag_description();
-			if ( ! empty( $tag_description ) )
-				echo apply_filters( 'tag_archive_meta', '<div class="tag-archive-meta">' . $tag_description . '</div>' );	?>	
-		
-		<!-- Loop principal -->
-		<?php while ( have_posts() ) : the_post(); ?>
-			<?php get_template_part( 'content', get_post_format() ); ?>
-		<?php endwhile; ?>
-        
-        <?php the_numbered_nav(); ?>
-	
-	<?php else : ?>
+	        <section class="Articulos">            
 
-		<article id="post-0" class="post no-results not-found">
-			<h1 class="titulo"><?php _e( 'Nothing Found', 'shbase' ); ?></h1>
-			
-			<div class="entry-content">
-				<p><?php _e( 'Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post.', 'shbase' ); ?></p>
-				<?php get_search_form(); ?>				
-			</div><!-- .entry-content -->
-		</article><!-- #post-0 -->
-	<?php endif; ?>
+	            <!-- Título -->
+	            <h1 class="Articulos-titulo">
+	                <?php printf( __( 'Tag Archives: %s', 'shbase' ), '<span>' . single_tag_title( '', false ) . '</span>' ); ?>
+	            </h1>		
+	    		<!-- Artículos -->
+	            <?php while ( have_posts() ) : the_post(); ?>
+	                
+	                <?php get_template_part( 'content', get_post_format() ); ?>
+	      
+	            <?php endwhile; ?>
+	      
+	       	    <?php the_numbered_nav(); ?>
 
-</section><!-- .content -->
+	        </section>
 
-<?php get_sidebar(); ?>
+	    <?php else : ?>
+	        
+	        <article class="u-contenido error404"> 
+	            
+	            <h1 class="Articulos-titulo">Página no encontrada</h1>            
+	            <p>Parece que la página que búscas no existe. ¿Por qué no pruebas usar el buscador que aprece a continuación para encontrar el contenido que deseas? <strong>¡Suerte!</strong></p>
+	            <?php get_search_form(); ?>
+	        
+	        </article>
+	  
+	    <?php endif; ?>
+	    
+	    <?php get_sidebar(); ?>
+
+	</section>
+
+	<?php get_sidebar(); ?>
+
 <?php get_footer(); ?>

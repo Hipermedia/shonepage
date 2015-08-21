@@ -265,7 +265,7 @@ if ( ! function_exists( 'shbase_continue_reading_link' ) ) :
  * Returns a "Continue Reading" link for excerpts
  */
 function shbase_continue_reading_link() {
-	return ' <a href="'. esc_url( get_permalink() ) . '">' . __( 'Continuar leyendo <span class=\"meta-nav\"></span>', 'shbase' ) . '</a>';
+	return ' <a href="'. esc_url( get_permalink() ) . '" class="leerMas">' . __( 'Ver más <span class=\"meta-nav\"></span>', 'shbase' ) . '</a>';
 }
 endif; // shbase_continue_reading_link
 

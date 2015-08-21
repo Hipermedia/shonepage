@@ -67,7 +67,7 @@
         <?php primalSocialShare(); ?>
         
         <!-- Formulario de búsqueda [Catacterística superior] -->
-        <?php // get_search_form(); ?>
+        <?php get_search_form(); ?>
         
         <!-- Menú principal -->  
         <?php primalNav(); ?>

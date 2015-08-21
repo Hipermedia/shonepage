@@ -9,23 +9,17 @@
 
 get_header(); ?>
 
-	<div id="primary">
-		<div id="content" role="main">
+<section class="u-contenedor">
 
-			<article id="post-0" class="post error404 not-found">
-				<header class="entry-header">
-					<h1 class="entry-title"><?php _e( 'This is somewhat embarrassing, isn&rsquo;t it?', 'shbase' ); ?></h1>
-				</header>
+   
+    <article class="Page u-contenido error404">	
+		
+		<h1 class="Page-title">Página no encontrada</h1>
+		
+		<p>Parece que la página que búscas no existe. ¿Por qué no pruebas usar el buscador que aprece a continuación para encontrar el contenido que deseas? <strong>¡Suerte!</strong></p>
+		<?php get_search_form(); ?>
+   
+	</article>
 
-				<div class="entry-content">
-					<p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching, or one of the links below, can help.', 'shbase' ); ?></p>
-
-					<?php get_search_form(); ?>
-
-				</div><!-- .entry-content -->
-			</article><!-- #post-0 -->
-
-		</div><!-- #content -->
-	</div><!-- #primary -->
 
 <?php get_footer(); ?>

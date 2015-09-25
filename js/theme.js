@@ -30,4 +30,72 @@ jQuery(document).ready(function($) {
 	  offset:'20%'
 	});
 
+	//Invocamos a los sliders en modo de ataque
+	// [Slider full]
+  	$('#slider-full').flexslider({
+  	  animation: "slide"
+  	});
+
+  	// [Slider galería]
+  	// --Imágenes principales
+  	$('#slider-gallery-thumbnav').flexslider({
+  	  animation: "slide",
+  	  controlNav: false,
+  	  animationLoop: false,
+  	  slideshow: false,
+  	  itemWidth: 137.5,
+  	  asNavFor: '#slider-gallery'
+  	});
+
+  	// --Imágenes de navegación
+  	$('#slider-gallery').flexslider({
+  	  animation: "slide",
+  	  controlNav: false,
+  	  animationLoop: false,
+  	  slideshow: false,
+  	  sync: "#slider-gallery-thumbnav"
+  	});
+
+    // [Slider noticias]
+    // --Imágenes principales
+    $('#news-slider-thumbnav').flexslider({
+      animation: "slide",
+      controlNav: false,
+      directionNav: false,
+      animationLoop: true,
+      slideshow: true,
+      itemWidth: 147,
+      asNavFor: '#news-slider'
+    });
+
+    // --Imágenes de navegación
+    $('#news-slider').flexslider({
+      animation: "slide",
+      controlNav: false,
+      animationLoop: true,
+      directionNav: false,
+      slideshow: true,
+      prevText: "",
+      nextText: "",
+      sync: "#news-slider-thumbnav"
+    });
+
+    // [Slider videos]
+    $('#slider-video').flexslider({
+      animation: "slide",
+      prevText: "",
+      nextText: ""
+    });
+
+    // [Slider filmstrip]
+    $('#slider-filmstrip').flexslider({
+        animation: "slide",
+        animationLoop: true,
+        slideshow: true,
+        itemWidth: 300,
+        controlNav: false,
+        prevText: "",
+        nextText: ""
+    });
+
 });

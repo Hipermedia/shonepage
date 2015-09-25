@@ -1,0 +1,52 @@
+/*------------------------------------------------*/
+/*------------------[	]----------------------*/
+/*------------------------------------------------*/
+
+.PrimalTabs {
+	padding: 2rem 0;
+
+	.PrimalTabs-contenido {
+		@media (max-width: $tablet-width) {
+			/*float: left;*/
+			width: 100%;
+			margin-bottom: 1.5rem;
+		}
+
+		.PrimalTabs-tabs {
+
+			.PrimalTabs-tabsTitulo.active {
+
+				.PrimalTabs-tabsLink { 
+					background: none; 
+					border: none;
+					font-weight: bold;  
+				}
+			}
+
+			.PrimalTabs-tabsTitulo {
+				width: 33.3%;
+
+				.PrimalTabs-tabsLink {
+					border: none;
+					margin: 0;
+					font-weight: bold;
+					padding: 10px 3px;
+					text-align: center;
+
+					&:hover {
+						border-radius: 0;
+						border: none;
+						background: none;
+					}
+				}
+			}
+		}
+		
+		.PrimalTabs-contenedor {
+
+			.PrimalTabs-contenedorPanel {
+				
+			}
+		}
+	}
+}

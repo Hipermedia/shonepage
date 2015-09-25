@@ -115,6 +115,35 @@ function primalCover() {
 	get_template_part( 'inc/cover/primal-cover');
 }
 
+
+/* Sliders
+ * ------------------------------------------------------------- */
+/* PRIMAL; slider */
+function primalSlider() {
+	get_template_part( 'inc/sliders/primal-slider');
+}
+
+/* GALLERY; slider */
+function gallerySlider() {
+	get_template_part( 'inc/sliders/gallery-slider');
+}
+
+/* NEWS; slider */
+function newsSlider() {
+	get_template_part( 'inc/sliders/news-slider');
+}
+
+/* VIDEO; slider */
+function videoSlider() {
+	get_template_part( 'inc/sliders/video-slider');
+}
+
+/* FILMSTRIP; slider */
+function filmstripSlider() {
+	get_template_part( 'inc/sliders/filmstrip-slider');
+}
+
+
 /* Bloques
  * ------------------------------------------------------------- */
 /* PRIMAL; bloques */
@@ -126,6 +155,11 @@ function sauteBlocks() {
 	get_template_part( 'inc/blocks/saute-blocks');
 }
 
+/* TABS; bloques */
+function primalTabs() {
+	get_template_part( 'inc/blocks/primal-tabs');
+}
+
 /* Texto
  * ------------------------------------------------------------- */
 /* PRIMAL; texto */
@@ -133,11 +167,49 @@ function primalText() {
 	get_template_part( 'inc/text/primal-text');
 }
 
+/* Precios
+ * ------------------------------------------------------------- */
+/* PRIMAL; precios */
+function primalPricing() {
+	get_template_part( 'inc/pricing/primal-pricing');
+}
+
 /* Testimonios
  * ------------------------------------------------------------- */
 /* PRIMAL; testimonios */
 function primalTestimony() {
 	get_template_part( 'inc/testimony/primal-testimony');
+}
+
+/* Galerías
+ * ------------------------------------------------------------- */
+/* PRIMAL; galería */
+function primalGallery() {
+	get_template_part( 'inc/gallery/primal-gallery');
+}
+
+/* Quotes
+ * ------------------------------------------------------------- */
+/* STARCHI; quotes */
+function starchiQuote() {
+	get_template_part( 'inc/quote/starchi-quote');
+}
+
+/* Contacto
+ * ------------------------------------------------------------- */
+/* PRIMAL; contacto */
+function primalContact() {
+	get_template_part( 'inc/contact/primal-contact');
+}
+
+/* COMPLETE; contacto */
+function completeContact() {
+	get_template_part( 'inc/contact/complete-contact');
+}
+
+/* METEORO; contacto */
+function meteoroContact() {
+	get_template_part( 'inc/contact/meteoro-contact');
 }
 
 /* Redes sociales
@@ -429,26 +501,14 @@ function the_custom_numbered_nav( $custom_query ) { ?>
 endif; // shbase_numerated_nav
 
 //FLEXSLIDER
-function flexslider_sh() {
+function flexslider() {
 $template_url = get_bloginfo( 'template_url' );
-
-	wp_enqueue_style( 'flexslider-style', $template_url .'/inc/flexslider/flexslider.css', '1' );
-
-	wp_enqueue_script( 'flexslider', $template_url .'/inc/flexslider/jquery.flexslider-min.js', array('jquery'), '1.10.2', 1);
-		
-	/*wp_enqueue_script( 'methodsvalidate', $template_url .'/js/additional-methods.js', array('jquery'), '1.10.2', 1);*/
-	
-	wp_enqueue_script( 'config-flexslider', $template_url .'/inc/flexslider/config.js', array('jquery','flexslider'), '', 1);
-
+	wp_enqueue_script( 'flexslider', $template_url .'/js/flexslider/jquery.flexslider.js', array('jquery'), '', 1);
 }
 
-//FLEXSLIDER CUSTOM CONFIG
-function flexslider_custom_config_sh() {
-$template_url = get_bloginfo( 'template_url' );
-
-	wp_enqueue_style( 'flexslider-style', $template_url .'/inc/flexslider/flexslider.css', '1' );
-
-	wp_enqueue_script( 'flexslider', $template_url .'/inc/flexslider/jquery.flexslider-min.js', array('jquery'), '1.10.2', 1);
+add_action('wp_enqueue_scripts','flexslider_enqueue');
+function flexslider_enqueue() {
+  wp_enqueue_script('jquery-flexslider', get_bloginfo('template_url').'/js/flexslider/jquery.flexslider.js', array('jquery') );
 }
 
 // WayPoints

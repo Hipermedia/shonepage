@@ -20,6 +20,7 @@ Text Domain: shbase
 @import "support/_font-awesome.scss"; /* Bootstrap */
 @import "support/bootstrap-theme.scss"; /* Bootstrap Theme */
 @import "support/_fonts.scss"; /* Open Sans */
+@import "support/_flexslider.scss"; /* Flexslider 2 */
 
 // Bootstrap Material Desing
 //@import "support/bootstrap-material/_material.scss"; /* Bootstrap Material Desing */
@@ -46,6 +47,29 @@ Text Domain: shbase
 @import "blocks/_nav.scss";
 @import "blocks/_redes_sociales.scss";
 
+/*--Sliders*/
+@import "blocks/_primal-slider.scss";
+@import "blocks/_gallery-slider.scss";
+@import "blocks/_news-slider.scss";
+@import "blocks/_video-slider.scss";
+@import "blocks/_filmstrip-slider.scss";
+
+/*--Quotes*/
+@import "blocks/_starchi-quote.scss";
+
+/*--Gallery*/
+@import "blocks/_primal-gallery.scss";
+
+/*--Tabs*/
+@import "blocks/_primal-tabs.scss";
+
+/*--Precios*/
+@import "blocks/_primal-pricing.scss";
+
+/*--Contacto*/
+@import "blocks/_primal-contact.scss";
+@import "blocks/_complete-contact.scss";
+@import "blocks/_meteoro-contact.scss";
 /* La personalización directa comienza aquí
 -------------------------------------------------------------- */
 

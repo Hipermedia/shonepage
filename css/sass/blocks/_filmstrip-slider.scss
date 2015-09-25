@@ -1,0 +1,35 @@
+.FilmstripSlider {
+	
+	.FilmstripSlider-contenido { 
+		border: none; 
+		margin: 0; 
+
+		.flex-direction-nav a { overflow: visible; }
+
+		.FilmstripSlider-slide {
+			text-align: center;
+			@media (max-width: $tablet-width) {
+				
+			}
+
+			.FilmstripSlider-slideImagen {
+				background: #EBEBEB;
+				width: 100%;
+				display: block;
+				text-align: center;
+			}
+
+			.FilmstripSlider-slideTitulo {
+				color: #333;
+				font-size: 1.5rem;
+				font-weight: bold;
+			}
+
+			.FilmstripSlider-slideSubtitulo {
+				color: #444;
+				font-size: 1rem;
+				font-weight: normal;
+			}
+		}
+	}
+}

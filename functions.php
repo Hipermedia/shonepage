@@ -188,6 +188,13 @@ function primalGallery() {
 	get_template_part( 'inc/gallery/primal-gallery');
 }
 
+/* Portafolio
+ * ------------------------------------------------------------- */
+/* IMGRID; portafolio */
+function imgridPortfolio() {
+	get_template_part( 'inc/portfolio/imgrid-portfolio');
+}
+
 /* Quotes
  * ------------------------------------------------------------- */
 /* STARCHI; quotes */
@@ -509,6 +516,33 @@ $template_url = get_bloginfo( 'template_url' );
 add_action('wp_enqueue_scripts','flexslider_enqueue');
 function flexslider_enqueue() {
   wp_enqueue_script('jquery-flexslider', get_bloginfo('template_url').'/js/flexslider/jquery.flexslider.js', array('jquery') );
+}
+
+//imGrid
+function imgrid() {
+$template_url = get_bloginfo( 'template_url' );
+	wp_enqueue_script( 'imgrid', $template_url .'/js/imgrid/imgrid.js', array('jquery'), '', 1);
+}
+
+//imGrid
+function imgridMin() {
+$template_url = get_bloginfo( 'template_url' );
+	wp_enqueue_script( 'imgridmin', $template_url .'/js/imgrid/imgrid.min.js', array('jquery'), '', 1);
+}
+
+function imgridVelocityUi() {
+$template_url = get_bloginfo( 'template_url' );
+	wp_enqueue_script( 'velocityui', $template_url .'/js/imgrid/velocity.ui.min.js', array('jquery'), '', 1);
+}
+
+function imgridVelocity() {
+$template_url = get_bloginfo( 'template_url' );
+	wp_enqueue_script( 'velocity', $template_url .'/js/imgrid/velocity.min.js', array('jquery'), '', 1);
+}
+
+function imgridImagesloaded() {
+$template_url = get_bloginfo( 'template_url' );
+	wp_enqueue_script( 'imagesloaded', $template_url .'/js/imgrid/imagesloaded.pkgd.js', array('jquery'), '', 1);
 }
 
 // WayPoints

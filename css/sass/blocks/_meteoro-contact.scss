@@ -5,12 +5,15 @@
 	.MeteoroContact-mapa {
 
 		iframe {
+    		pointer-events: none;
 			width: 100% !important;
 			height: 80vh !important;
 		}
 	}
 
 	.MeteoroContact-contenido {
+		overflow: visible;
+		height: 0;
 		position: absolute;
 		top: 0;
 		left: 0;

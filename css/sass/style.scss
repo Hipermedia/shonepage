@@ -22,6 +22,33 @@ Text Domain: shbase
 @import "support/_fonts.scss"; /* Open Sans */
 @import "support/_flexslider.scss"; /* Flexslider 2 */
 
+/*imGrid plugin*/
+@import "support/imgrid/_imgrid.scss";
+@import "support/imgrid/_imgrid.hover.scss";
+@import "support/imgrid/hover/_apollo.scss";
+@import "support/imgrid/hover/_bubba.scss";
+@import "support/imgrid/hover/_chico.scss";
+@import "support/imgrid/hover/_duke.scss";
+@import "support/imgrid/hover/_goliath.scss";
+@import "support/imgrid/hover/_hera.scss";
+@import "support/imgrid/hover/_hover.scss";
+@import "support/imgrid/hover/_jazz.scss";
+@import "support/imgrid/hover/_julia.scss";
+@import "support/imgrid/hover/_kira.scss";
+@import "support/imgrid/hover/_lexi.scss";
+@import "support/imgrid/hover/_lily.scss";
+@import "support/imgrid/hover/_marley.scss";
+@import "support/imgrid/hover/_milo.scss";
+@import "support/imgrid/hover/_ming.scss";
+@import "support/imgrid/hover/_oscar.scss";
+@import "support/imgrid/hover/_romeo.scss";
+@import "support/imgrid/hover/_ruby.scss";
+@import "support/imgrid/hover/_sadie.scss";
+@import "support/imgrid/hover/_sarah.scss";
+@import "support/imgrid/hover/_steve.scss";
+@import "support/imgrid/hover/_zoe.scss";
+
+
 // Bootstrap Material Desing
 //@import "support/bootstrap-material/_material.scss"; /* Bootstrap Material Desing */
 //@import "support/bootstrap-material/_material-wfont.scss"; /* Bootstrap Material Desing */

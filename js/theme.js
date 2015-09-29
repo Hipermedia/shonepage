@@ -1,5 +1,14 @@
 jQuery(document).ready(function($) {
 
+  // pequeña función para desactivar los eventos en el mapa
+  $('.MeteoroContact-mapa').click(function () {
+      $('.MeteoroContact-mapa iframe').css("pointer-events", "auto");
+  });
+
+  $('.MeteoroContact-mapa').mouseleave(function() { 
+    $('.MeteoroContact-mapa iframe').css("pointer-events", "none"); 
+  }); //fin
+
 
 	// Reduce el header al hacer scrolldown; la animación se realiza con CSS
 	$(window).on("scroll touchmove", function () {
@@ -98,4 +107,19 @@ jQuery(document).ready(function($) {
         nextText: ""
     });
 
+    // imgrid customization
+
+    $("#imgrid-portfolio").imgrid({
+      thumbSize: 300,
+      thumbHoverEffect: "lexi",
+      thumbLightbox: false
+    });
+
+    $('#filter-button').click(function () {
+      $("#imgrid-portfolio").imgrid('filter', 'group1'); //Note that group1 not carries '.'
+    })
+
+    $('#unfilter-button').click(function () {
+      $("#imgrid-portfolio").imgrid('filter', 'all'); //Note that group1 not carries '.'
+    })
 });

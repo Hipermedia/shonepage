@@ -42,6 +42,8 @@ get_header(); ?>
 
 	<?php gallerySlider(); ?>
 
+	<?php meteoroContact(); ?>
+	
 	<?php primalContact(); ?>
 
 	<?php completeContact(); ?>
@@ -50,6 +52,6 @@ get_header(); ?>
 
 	<?php primalPricing(); ?>
 
-	<?php meteoroContact(); ?>
+	<?php imgridPortfolio(); ?>
 
 <?php get_footer(); ?>

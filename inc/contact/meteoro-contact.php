@@ -1,6 +1,6 @@
 <section class="MeteoroContact u-contenedor-completo">
     <div class="MeteoroContact-mapa"> 
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3760.231565114685!2d-96.89147209999997!3d19.531669500000007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85db32270aade5ef%3A0x7a7a804a52710b4e!2sChopin%2C+Indeco+Animas%2C+91190+Xalapa+Enr%C3%ADquez%2C+Ver.!5e0!3m2!1ses-419!2smx!4v1443036826093" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>                                              
+        <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d7520.222885610886!2d-96.89151129999999!3d19.5368285!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2ses!4v1443484580086" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
     </div>  
     
     <div class="MeteoroContact-contenido u-contenedor">

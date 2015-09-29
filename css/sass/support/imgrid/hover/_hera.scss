@@ -1,0 +1,100 @@
+figure.effect-hera {
+  background: #303fa9;
+}
+figure.effect-hera figcaption::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  border: 2px solid #fff;
+  content: '';
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(-50%, -50%, 0) rotate3d(0, 0, 1, -45deg) scale3d(0, 0, 1);
+  transform: translate3d(-50%, -50%, 0) rotate3d(0, 0, 1, -45deg) scale3d(0, 0, 1);
+  -webkit-transform-origin: 50%;
+  transform-origin: 50%;
+}
+figure.effect-hera h2,
+figure.effect-hera p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  -webkit-transform-origin: 50%;
+  transform-origin: 50%;
+}
+figure.effect-hera h2 {
+  font-size: 158.75%;
+}
+figure.effect-hera p {
+  width: 100px;
+  text-transform: none;
+  font-size: 121%;
+  line-height: 2;
+}
+figure.effect-hera p.description {
+  display: none;
+}
+figure.effect-hera p.icon-links {
+  display: inline-block;
+}
+figure.effect-hera p.icon-links a {
+  color: #fff;
+}
+figure.effect-hera p.icon-links a span,
+figure.effect-hera p.icon-links a i {
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+}
+figure.effect-hera p.icon-links a span::before,
+figure.effect-hera p.icon-links a i::before {
+  padding: 0px 6px;
+}
+figure.effect-hera p.icon-links a:hover,
+figure.effect-hera p.icon-links a:focus {
+  opacity: 0.6;
+}
+figure.effect-hera p.icon-links a:first-child i,
+figure.effect-hera p.icon-links a:first-child span {
+  -webkit-transform: translate3d(-60px, -60px, 0);
+  transform: translate3d(-60px, -60px, 0);
+}
+figure.effect-hera p.icon-links a:nth-child(2) i,
+figure.effect-hera p.icon-links a:nth-child(2) span {
+  -webkit-transform: translate3d(60px, -60px, 0);
+  transform: translate3d(60px, -60px, 0);
+}
+figure.effect-hera p.icon-links a:nth-child(3) i,
+figure.effect-hera p.icon-links a:nth-child(3) span {
+  -webkit-transform: translate3d(-60px, 60px, 0);
+  transform: translate3d(-60px, 60px, 0);
+}
+figure.effect-hera p.icon-links a:nth-child(4) i,
+figure.effect-hera p.icon-links a:nth-child(4) span {
+  webkit-transform: translate3d(60px, 60px, 0);
+  transform: translate3d(60px, 60px, 0);
+}
+figure.effect-hera:hover h2 {
+  opacity: 0;
+  -webkit-transform: translate3d(-50%, -50%, 0) scale3d(0.8, 0.8, 1);
+  transform: translate3d(-50%, -50%, 0) scale3d(0.8, 0.8, 1);
+}
+figure.effect-hera:hover figcaption::before {
+  opacity: 1;
+  -webkit-transform: translate3d(-50%, -50%, 0) rotate3d(0, 0, 1, -45deg) scale3d(1, 1, 1);
+  transform: translate3d(-50%, -50%, 0) rotate3d(0, 0, 1, -45deg) scale3d(1, 1, 1);
+}
+figure.effect-hera:hover p.icon-links i:empty,
+figure.effect-hera:hover p.icon-links span:empty {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  /* just because it's stronger than nth-child */
+  opacity: 1;
+}

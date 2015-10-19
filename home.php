@@ -13,7 +13,8 @@
  */
 
 get_header(); ?>
-		<!-- Cover -->
+
+	<!-- Cover -->
 	<?php primalCover(); // Cover con imágen de fondo, imagen principal y títulos ?>
 
 	<?php newsSlider(); ?>
@@ -23,6 +24,8 @@ get_header(); ?>
 	<?php videoSlider(); ?>
 
 	<?php starchiQuote(); ?>
+
+	<?php cardsTestimony(); ?>
 
 	<?php filmstripSlider(); ?>
 
@@ -56,7 +59,6 @@ get_header(); ?>
 	<?php imgridPortfolio(); ?>
 
 	<?php backgroundVideo(); ?>
-
 
 	<?php primalFooter(); ?>
 

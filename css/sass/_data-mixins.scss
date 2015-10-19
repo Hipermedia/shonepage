@@ -63,6 +63,12 @@ $smaller-width: 560px;
 		 -o-transition: all $tiempo $efecto;
 		    transition: all $tiempo $efecto; 
 }
+@mixin fastTransicion($tiempo: 0.2s, $efecto: ease-in-out) {
+	-webkit-transition: all $tiempo $efecto;
+	   -moz-transition: all $tiempo $efecto;
+		 -o-transition: all $tiempo $efecto;
+		    transition: all $tiempo $efecto; 
+}
 @mixin color-placeholder( $color-ph: #888 ) {
 	::-webkit-input-placeholder { color: $color-ph; }
 	:-moz-placeholder { /* Firefox 18- */   opacity: 1; color: $color-ph;  }

@@ -192,6 +192,11 @@ function primalTestimony() {
 	get_template_part( 'inc/testimony/primal-testimony');
 }
 
+/* CARDS; testimonios */
+function cardsTestimony() {
+	get_template_part( 'inc/testimony/cards-testimony');
+}
+
 /* Galerías
  * ------------------------------------------------------------- */
 /* PRIMAL; galería */

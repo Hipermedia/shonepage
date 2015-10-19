@@ -24,6 +24,8 @@
 <?php imgrid(); //nuevo plugin de imágenes ?>
 <?php //imgridMin(); //nuevo plugin de imágenes ?>
 
+<?php //tubular(); ?>
+
 <?php waypoints(); // Librería que detecta puntos en el scroll de pantalla ?>
 <?php bootstrap(); // framework Bootsrap ?>
 <?php bootstrapMaterial(); // Bootsrap - Material ?>

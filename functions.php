@@ -115,6 +115,13 @@ function primalCover() {
 	get_template_part( 'inc/cover/primal-cover');
 }
 
+/* Video
+ * ------------------------------------------------------------- */
+/* PRIMAL; cover */
+function backgroundVideo() {
+	get_template_part( 'inc/video/background-video');
+}
+
 
 /* Sliders
  * ------------------------------------------------------------- */
@@ -143,6 +150,10 @@ function filmstripSlider() {
 	get_template_part( 'inc/sliders/filmstrip-slider');
 }
 
+/* FILMSTRIP; slider */
+function textSlider() {
+	get_template_part( 'inc/sliders/text-slider');
+}
 
 /* Bloques
  * ------------------------------------------------------------- */
@@ -228,6 +239,11 @@ function primalSocialShare() {
 /* ANLI; social share buttons */
 function anliSocialShare() {
 	get_template_part( 'inc/social/anli-socialshare');
+}
+
+/* ANLI; social share buttons */
+function primalFooter() {
+	get_template_part( 'inc/footer/primal-footer');
 }
 
 
@@ -549,6 +565,12 @@ $template_url = get_bloginfo( 'template_url' );
 function waypoints() {
 $template_url = get_bloginfo( 'template_url' );
 	wp_enqueue_script( 'waypoints', $template_url .'/js/waypoints/jquery.waypoints.min.js', array('jquery'), '', 1);
+}
+
+// Tubular
+function tubular() {
+$template_url = get_bloginfo( 'template_url' );
+	wp_enqueue_script( 'tubular', $template_url .'/js/tubular/jquery.tubular.1.0.js', array('jquery'), '', 1);
 }
 
 // Bootstrap

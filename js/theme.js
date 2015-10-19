@@ -107,6 +107,12 @@ jQuery(document).ready(function($) {
         nextText: ""
     });
 
+    $(window).load(function() {
+      $('.flexslider').flexslider({
+        animation: "slide"
+      });
+    });
+
     // imgrid customization
 
     $("#imgrid-portfolio").imgrid({
@@ -122,4 +128,5 @@ jQuery(document).ready(function($) {
     $('#unfilter-button').click(function () {
       $("#imgrid-portfolio").imgrid('filter', 'all'); //Note that group1 not carries '.'
     })
+
 });

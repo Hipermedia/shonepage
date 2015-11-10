@@ -18,7 +18,7 @@ get_header(); ?>
 	<?php primalCover(); // Cover con imágen de fondo, imagen principal y títulos ?>
 	
 
-	<h1>deploy.sh existe</h1>
+	<h1>deploy.sh existe prueba 2</h1>
 
 	<?php newsSlider(); ?>
 

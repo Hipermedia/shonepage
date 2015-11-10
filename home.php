@@ -16,6 +16,9 @@ get_header(); ?>
 
 	<!-- Cover -->
 	<?php primalCover(); // Cover con imágen de fondo, imagen principal y títulos ?>
+	
+
+	<h1>Texto de prueba</h1>
 
 	<?php newsSlider(); ?>
 

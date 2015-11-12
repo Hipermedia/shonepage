@@ -17,7 +17,8 @@ get_header(); ?>
 	<!-- Cover -->
 	<?php primalCover(); // Cover con imágen de fondo, imagen principal y títulos ?>
 	
-
+	<?php primalDocs(); ?>
+	
 	<h1>deploy.sh existe prueba 3</h1>
 
 	<?php newsSlider(); ?>
@@ -54,6 +55,8 @@ get_header(); ?>
 	<?php primalContact(); ?>
 
 	<?php completeContact(); ?>
+
+
 
 	<?php primalGallery(); ?>
 

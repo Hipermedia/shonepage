@@ -75,6 +75,11 @@ if( function_exists('acf_add_options_page') ) {
 		'title' 	=> 'Testimonios',
 		'parent_slug'	=> 'theme-general-settings',
 	));	
+
+	acf_add_options_sub_page(array(
+		'title' 	=> 'Documentos',
+		'parent_slug'	=> 'theme-general-settings',
+	));
 	acf_add_options_sub_page(array(
 		'title' 	=> 'Contacto',
 		'parent_slug'	=> 'theme-general-settings',
@@ -216,6 +221,13 @@ function imgridPortfolio() {
 /* STARCHI; quotes */
 function starchiQuote() {
 	get_template_part( 'inc/quote/starchi-quote');
+}
+
+/* Documentos
+ * ------------------------------------------------------------- */
+/* PRIMAL; docs */
+function primalDocs() {
+	get_template_part( 'inc/docs/primal-docs');
 }
 
 /* Contacto

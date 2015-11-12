@@ -9,11 +9,12 @@
 ?>
 
 <!-- DOCUMENTOS -->
-<section class="documentos">
-    <?php while ( have_rows('documento') ) : the_row(); ?>
+<section class="documentos u-contenedor">
+    <h2>primalDocs</h2>
+    <?php while ( have_rows('documento', 'option') ) : the_row(); ?>
         <div class="bloque-documento">
 			<?php // elige el icono para el tipo de documento 
-            $doc_type = get_sub_field('tipo'); 
+            $doc_type = get_sub_field('tipo', 'option'); 
             switch ($doc_type) { 
                 case 'word': $tipo = 'fa fa-file-word-o'; break;
                 case 'excel': $tipo = 'fa fa-file-excel-o'; break;
@@ -26,12 +27,12 @@
                 default: $tipo = 'fa-file';
             } ?>
             <h2> <i class="fa <?php echo $tipo; ?>"></i>
-            	<?php the_sub_field('titulo'); ?>                	
+            	<?php the_sub_field('titulo', 'option'); ?>                	
             </h2>
             <p class="descripcion-documento">
-              	<?php the_sub_field('descripcion'); ?>
+              	<?php the_sub_field('descripcion', 'option'); ?>
             </p>
-            <a class="descargar-documento" target="_blank" href="<?php the_sub_field('file'); ?>" rel="<?php the_sub_field('titulo'); ?>">
+            <a class="descargar-documento" target="_blank" href="<?php the_sub_field('file', 'option'); ?>" rel="<?php the_sub_field('titulo', 'option'); ?>">
               	<i class="fa fa-cloud-download fa-1x"></i> descargar
             </a>
         </div>

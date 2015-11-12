@@ -96,6 +96,22 @@ $smaller-width: 560px;
 	@include fancy-box-shadow;
 }
 
+@mixin gray-fancy-bg-color {
+	background: #f5f5f5; 
+	background: -moz-linear-gradient(top,  #f5f5f5 0%, #efefef 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f5f5f5), color-stop(100%,#efefef)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #f5f5f5 0%,#efefef 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #f5f5f5 0%,#efefef 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #f5f5f5 0%,#efefef 100%); /* IE10+ */
+	background: linear-gradient(top,  #f5f5f5 0%,#efefef 100%); /* W3C */
+	-pie-background: linear-gradient(top,  #f5f5f5 0%,#efefef 100%); 
+}
+
+@mixin rounded($radius: 0.5em) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
 
 
 /*-----------------------------------------------*/

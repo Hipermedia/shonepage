@@ -69,12 +69,17 @@ Text Domain: shbase
 ------------------------------------------*/
 @import "blocks/_cover.scss";
 @import "blocks/_blocks.scss";
-@import "blocks/_testimony.scss";
+
 @import "blocks/_text.scss";
 @import "blocks/_nav.scss";
 @import "blocks/_redes_sociales.scss";
 
+/*--Documentos*/
+@import "blocks/_primal-docs.scss";
+
+/*--Testimonios*/
 @import "blocks/_card-testimony.scss";
+@import "blocks/_testimony.scss";
 
 /*--Sliders*/
 @import "blocks/_primal-slider.scss";

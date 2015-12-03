@@ -613,3 +613,14 @@ function themejs() {
 $template_url = get_bloginfo( 'template_url' );
 	wp_enqueue_script( 'themejs', $template_url .'/js/theme.js', array('jquery'), '', 1);
 }
+
+
+// Función que remueve el ícono para actualizar la versión de WP de la barra de administrador (no del admin panel)
+function remove_admin_bar_links() {
+    global $wp_admin_bar, $current_user;
+    
+    if ($current_user->ID != 1) {
+        $wp_admin_bar->remove_menu('updates');
+    }
+}
+add_action( 'wp_before_admin_bar_render', 'remove_admin_bar_links' );

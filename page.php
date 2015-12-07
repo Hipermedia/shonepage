@@ -17,6 +17,10 @@ get_header(); ?>
 				<figure class="Page-featuredImage">
 					<?php the_post_thumbnail( 'large' ); ?>
 				</figure>
+			<?php else : ?>
+				<figure class="Page-featuredImage">
+					<img src="<?php the_field('thumbPersonalizada', 'option'); ?>" alt="">
+				</figure>
 			<?php endif; ?>
 			<!-- Título del artículo -->
 			<h1 class="Page-title"><?php the_title(); ?></h1>

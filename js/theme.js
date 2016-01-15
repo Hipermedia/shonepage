@@ -1,5 +1,35 @@
 jQuery(document).ready(function($) {
 
+  // validate signup form on keyup and submit
+  $("#psh-generar-boton").validate({
+    rules: {
+      concepto: "required",
+      importe: "required",
+      importeparcialidad: "required",
+    },
+    messages: {
+      concepto: "Ingresa el nombre de tu producto",
+      importe: "Ingresa el importe total de tu producto",
+      importeparcialidad: "Ingresa el importe para esta parcialidad",
+    }
+  });
+
+  // validate signup form on keyup and submit
+  $(".psh-form").validate({
+     rules: {
+        nombre: "required",
+        apellido: "required",
+        email: "required",
+        formapago: "required",
+     },
+     messages: {
+        nombre: "Ingresa tu nombre",
+        apellido: "Ingresa tu apellido",
+        email: "Ingresa tu dirección de correo",
+        formapago: "Elige tu forma de pago",
+     }
+  });
+
   // pequeña función para desactivar los eventos en el mapa
   $('.MeteoroContact-mapa').click(function () {
       $('.MeteoroContact-mapa iframe').css("pointer-events", "auto");

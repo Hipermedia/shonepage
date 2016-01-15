@@ -614,6 +614,12 @@ $template_url = get_bloginfo( 'template_url' );
 	wp_enqueue_script( 'themejs', $template_url .'/js/theme.js', array('jquery'), '', 1);
 }
 
+// Validación de campos en pagos
+function validate() {
+$template_url = get_bloginfo( 'template_url' );
+	wp_enqueue_script( 'validate', $template_url .'/js/jquery-validation/dist/jquery.validate.js', array('jquery'), '', 1);
+}
+
 
 // Función que remueve el ícono para actualizar la versión de WP de la barra de administrador (no del admin panel)
 function remove_admin_bar_links() {
@@ -624,3 +630,181 @@ function remove_admin_bar_links() {
     }
 }
 add_action( 'wp_before_admin_bar_render', 'remove_admin_bar_links' );
+
+
+
+// funciones del sistema de pagos
+//IMPRIME OPCIONES PERIODICIDAD
+function imprime_opciones_periodicidad() {
+	echo '<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+		<option value="4">4</option>
+		<option value="5">5</option>
+		<option value="6">6</option>
+		<option value="7">7</option>
+		<option value="8">8</option>
+		<option value="9">9</option>
+		<option value="10">10</option>
+		<option value="11">11</option>
+		<option value="12">12</option>
+		<option value="13">13</option>
+		<option value="14">14</option>
+		<option value="15">15</option>
+		<option value="16">16</option>
+		<option value="17">17</option>
+		<option value="18">18</option>
+		<option value="19">19</option>
+		<option value="20">20</option>
+		<option value="21">21</option>
+		<option value="22">22</option>
+		<option value="23">23</option>
+		<option value="24">24</option>
+		<option value="25">25</option>
+		<option value="26">26</option>
+		<option value="27">27</option>
+		<option value="28">28</option>
+		<option value="29">29</option>
+		<option value="30">30</option>';
+}
+
+//IMPRIME OPCIONES PERIODICIDAD2
+function imprime_opciones_periodicidad2() {
+	echo '<option value="dia(as)">dia(as)</option>
+		<option value="semana(s)">semana(s)</option>
+		<option value="mes(es)" selected="selected">mes(es)</option>
+		<option value="año(s)">año(s)</option>';
+}
+
+//IMPRIME OPCIONES PARCIALIDADES
+function imprime_opciones_parcialidades() {
+	echo '<option value="nunca">Ilimitadas</option>
+        <option value="2" selected="selected">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">23</option>
+        <option value="24">24</option>
+        <option value="25">25</option>
+        <option value="26">26</option>
+        <option value="27">27</option>
+        <option value="28">28</option>
+        <option value="29">29</option>
+        <option value="30">30</option>';
+}
+
+//IMPRIME UN ARRAY EN FORMA LEGIBLE PARA HUMANOS
+function imprime_array($myarray) {
+	echo 'PRINT_R  ';
+	echo '<pre>';
+	print_r($myarray);
+	echo '</pre>';
+	
+	echo 'VAR_DUMP ';
+	echo '<pre>';
+	var_dump($myarray);
+	echo '</pre>';
+	
+	echo 'VAR_EXPORT ';
+	echo '<pre>';
+	var_export($myarray);
+	echo '</pre>';
+}
+
+	global $url_instalacion, $url_principal;
+	//Escribe la URL principal a donde serán redirigidos los usuarios si llegan directamente por error a algún paso del proceso de pago
+	$url_principal = get_option('home');
+	//Escribe el url donde se instaló el sistema (sin la /)
+	$url_instalacion = get_option('home');
+
+	global $usuario, $password;
+	//Escribe el nombre de usuario para el sistema
+	$usuario = 'admin';
+	//Escribe la contraseña del usuario
+	$password = 'acceso01';
+
+	/////DEPOSITO EN EFECTIVO/////
+	
+	global $banco, $cuenta, $clabe, $titular;
+	//Banco de la cuenta
+	$banco = 'xxxx';
+	//Número de cuenta
+	$cuenta = 'xxxx';
+	//CLABE
+	$clabe = 'xxxx';
+	//Titular de la cuenta
+	$titular = 'xxxx';
+
+	/////PAYPAL/////
+	
+	global $paypalsandbox, $customerpaypalemail, $customerpaypallogo, $paypalreturnurl, $paypalreturnmethod, $paypalreturnbuttontext, $paypalcancelreturn, $paypalbuynowimg, $paypalbuynowimgalt;
+	//Define si paypal se utiliza en sandbox
+	$paypalsandbox = false;
+	//Escribe el email de paypal del cliente
+	$customerpaypalemail = 'solhipermedia@gmail.com';
+	//Coloca la URL del logo de 150x150 pixeles que aparece en la esquina superior izquierda en la página de pago de paypal
+	$customerpaypallogo = '';
+	//URL a la que son redirigidos los compradores despues de realizar su pago
+	$paypalreturnurl = 'http://localhost/shpagos/pago/graciaspago.php';
+	//Método utilizado por el servidor de paypal para regresar al sitio del vendedor. Este script utiliza POST. 2 Espicifica POST y regresa todas las variables.
+	$paypalreturnmethod = '2';
+	//Define el texto que aparece en el botón "Regresar al sitio del vendedor" despues de que el comprador realizó su pago
+	$paypalreturnbuttontext = 'Regresar al sitio del vendedor!!!';
+	//Define la URL a la que se redirigirá el comprador si cancela su compra
+	$paypalcancelreturn = 'http://localhost/shpagos';
+	//URL de la imagen del botón de pago. Puedes reemplazar la imagen por defecto de paypal por una imagen de 107x26 pixeles
+	$paypalbuynowimg = 'https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif';
+	//Texto de la imagen del botón de pago. Texto que aparece si la imagen no se carga.
+	$paypalbuynowimgalt = 'PayPal - The safer, easier way to pay online';
+
+	/////SISTEMA DE CORREOS/////
+	
+	global $encabezado_correo, $nombre_comercio, $direccion_comercio, $telefono_comercio, $correo_contacto_comercio, $correo_replyto_comercio, $sitio_comercio, $fb_fanpage_comercio;	
+	$encabezado_correo = 'http://localhost/shpagos/pago/admin/img/encabezado-correo.jpg';
+	$nombre_comercio = 'Soluciones Hipermedia';
+	$direccion_comercio = 'Xalapa, Veracruz';
+	$telefono_comercio = '';
+	$correo_contacto_comercio = 'soportehipermedia@gmail.com';
+	$correo_replyto_comercio = 'soportehipermedia@gmail.com';
+	$sitio_comercio = 'http://localhost/shpagos/';
+	$fb_fanpage_comercio = 'http://facebook.com/';
+	
+	/////CREDENCIALES AMAZON SES/////
+
+	global $ses_verified_sender, $ses_iam_username, $ses_smtp_username, $ses_smtp_password;	
+	//¡¡¡ALERTA!!! - Es de suma importancia generar un nuevo grupo de credenciales en la consola de Amazon SES y configurar la dirección de notificaciones para rebotes y quejas. De no hacerlo cosas terribles pueden suceder. Los datos siguientes pertenecen a las CREDENCIALES DE PRUEBA y no están vigiladas.
+	
+	//No olvides borrar este bloque antes de entregar el proyecto
+	/*$ses_iam_username = 'ses-smtp-user.pagos';
+	$ses_smtp_username = 'AKIAJBXYW7RMDRWVXDBA';
+	$ses_smtp_password = 'AnchG5JB7zM4H4DKcUhFbN3ORYo7kpZGK+alqjV3jIVt';*/
+	
+	$ses_verified_sender = 'servicio.de.correo@solucioneshipermedia.com';
+	$ses_iam_username = 'ses-smtp-user.pagos';
+	$ses_smtp_username = 'AKIAJBXYW7RMDRWVXDBA';
+	$ses_smtp_password = 'AnchG5JB7zM4H4DKcUhFbN3ORYo7kpZGK+alqjV3jIVt';
+
+
+	add_action ('init', 'myStartSession', 1);
+	function myStartSession() {
+	     if (! session_id ()) {
+	         session_start();
+	     }
+	}

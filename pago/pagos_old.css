@@ -1,0 +1,273 @@
+/*
+Script name: Proceso de Pagos Soluciones Hipermedia | Integración con el sitio del cliente
+Script URI: http://www.solucioneshipermedia.com/
+Version: 1.0
+Authors: Alejandro Sobrevillla Viveros (@hunabix), Hibam Iru Dionisio Alor (@hibamiru)
+Email: info@solucioneshipermedia.com
+Authors URI: http://www.solucioneshipermedia.com
+*/
+
+
+
+/* GENERAL CONTENT */
+
+.psh-round-corner {
+	border-radius: 8px;
+	-ms-border-radius: 8px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-khtml-border-radius: 8px;
+}
+.psh-grey-box {
+	margin: 10px 30px;
+	background-color: #ddd;
+	padding: 8px 10px;
+	border: 1px solid #ccc;
+}
+
+.psh-descripcion {
+	font-size: .94em !important;
+	margin: -4px 60px 10px 21px !important;
+	font-style: italic;
+	color: #666;	
+}
+
+#psh-content {
+	font-family: 'Open Sans', sans-serif;
+	color: #333;
+	padding: 40px 20px;
+	width: 1000px;
+	margin: 0 auto;
+}
+
+#psh-titulo-pagina {
+	
+}
+
+#psh-content h1 {
+	font-size: 1.5em;
+}
+#psh-content h2 {
+	font-size: 1.4em;
+}
+#psh-content h3 {
+	font-size: .9em;
+}
+#psh-content h4 {
+	font-size: .7em;
+}
+#psh-content h5 {
+	font-size: .5em;
+}
+#psh-content h6 {
+	font-size: .4em;
+}
+#psh-content p {
+	font-size: 1em;	
+	margin: 5px 10px;
+}
+
+.psh-or {
+	min-height: 40px;
+	float: left;
+	width: 30px;
+	display: block;
+	line-height: 40px;
+	margin: 20px;
+	text-align: center;
+}
+.psh-instrucciones {
+	color:#222;
+	font-size: .92em;
+}
+
+.psh-nombre-seccion {
+	color: #B5873D;
+	font-size: 1.4em;
+	padding: 5px 0;
+	margin: 0;
+}
+
+.psh-ayuda {
+	font-size: 12px;
+	color: #999;
+	display: block;
+	clear: both;
+}
+
+
+
+/* SECCION */
+#psh-general-container {
+	margin: 40px auto;
+	width: 800px;
+	padding: 20px 20px 80px;
+	background: #F9F9F9;
+	-webkit-box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.23);
+	-moz-box-shadow:    0px 3px 4px 0px rgba(50, 50, 50, 0.23);
+	box-shadow:         0px 3px 4px 0px rgba(50, 50, 50, 0.23);	
+}
+#psh-container-footer {
+	padding: 10px 20px 40px;	
+}
+
+
+/* =FORMS */
+.psh-form input[type="text"],
+.psh-form input[type="email"],
+.psh-form input[type="password"],
+.psh-form input[type="number"],
+.psh-form select,
+.psh-form textarea {
+	background: #fff;
+	border: 1px solid #eee;
+	-moz-border-radius: 5px;
+	border-radius: 4px;
+	-ms-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-khtml-border-radius: 4px;
+	-webkit-box-shadow: inset 1px 1px 1px 1px rgba(00, 00, 00, .2);
+	-moz-box-shadow: inset 1px 1px 2px 2px rgba(00, 00, 00, .2);
+	box-shadow: inset 1px 1px 1px 1px rgba(00, 00, 00, .3);     
+	position: relative;
+	padding: 8px 5%;
+	text-indent: 10px;
+	width: 90%;
+	color: #666;
+	font-size: 1em;
+}
+.psh-form select {
+	width: 20%;
+	padding: 8px 2% 8px 0;
+}
+
+.psh-form input[type="number"] {  width: 10%; margin: 0 6px;  }
+.psh-form label {
+	font-size: 1em;
+	padding: 8px 0;
+	display: block;
+	font-weight: bold;
+}
+
+.psh-form p { margin-bottom:10px; }
+
+.psh-form input[type="submit"], .psh-form button {
+	background: #444;
+	border: none;
+	border-radius: 4px;
+	-ms-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-khtml-border-radius: 4px;
+	-webkit-box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+	box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+	color: #eee;
+	cursor: pointer;
+	font-size: 18px;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.3);
+	font-weight: bold;
+	width: 100%;
+	padding: 8px 5%;
+	margin: 20px auto 10px;
+	display:block;
+	clear:both;
+}
+
+.psh-form input[type="submit"]:hover {
+	background: #222;
+	color: #fff;
+}
+
+/* BREADCRUMB */
+ul#breadcrumbs {
+  margin: 0 auto;
+  padding: 0;
+  width: 920px;
+  list-style: none;
+  
+}
+#breadcrumbs{
+  overflow: hidden;
+  width: 100%;
+}
+
+#breadcrumbs li{
+  float: left;
+  margin: 0 .5em 0 1em;
+}
+
+#breadcrumbs a{
+  background: #ddd;
+  padding: .7em 1em;
+  float: left;
+  text-decoration: none;
+  color: #444;
+  text-shadow: 0 1px 0 rgba(255,255,255,.5); 
+  position: relative;
+  font-size: 0.8em;
+}
+
+#breadcrumbs a.activo{
+  background: #99db76;
+}
+
+#breadcrumbs a::before{
+  content: "";
+  position: absolute;
+  top: 50%; 
+  margin-top: -1.5em;   
+  border-width: 1.5em 0 1.5em 1.08em;
+  border-style: solid;
+  border-color: #ddd #ddd #ddd transparent;
+  left: -1em;
+}
+
+#breadcrumbs a.activo::before {
+  border-color: #99db76 #99db76 #99db76 transparent;
+}
+
+#breadcrumbs a::after{
+  content: "";
+  position: absolute;
+  top: 50%; 
+  margin-top: -1.5em;   
+  border-top: 1.5em solid transparent;
+  border-bottom: 1.5em solid transparent;
+  border-left: 1.08em solid #ddd;
+  right: -1em;
+}
+
+#breadcrumbs a.activo::after{
+  border-left-color: #99db76;
+}
+
+#breadcrumbs .current,
+#breadcrumbs .current:hover{
+  font-weight: bold;
+  background: none;
+}
+
+#breadcrumbs .current::after,
+#breadcrumbs .current::before{
+  content: normal;
+}
+
+
+
+/* color de las marcas de agua o input placeholders */
+::-webkit-input-placeholder { color: #ccc; }
+:-moz-placeholder { /* Firefox 18- */   opacity: 1; color: #ccc;  }
+::-moz-placeholder {  /* Firefox 19+ */  opacity: 1;   color: #ccc;  }
+:-ms-input-placeholder {  color: #ccc;  }
+
+/* COLORES */
+#breadcrumbs a { background: #ddd; color: #444; } /* Color del contenido del los breadcrumbs */
+#breadcrumbs a::after{ border-left-color: #ddd; } /* Color de las puntas del breadcrum */
+#breadcrumbs a::before { border-color: #ddd #ddd #ddd transparent; } /* Color de la colas del breadcrum */
+
+
+#breadcrumbs a.activo { background-color: #333; color: #fff;  } /* Color del breadcrum activo */
+#breadcrumbs a.activo::after{ border-left-color: #333; } /* Color de la punta del breadcrum activo */
+#breadcrumbs a.activo::before { border-color: #333 #333 #333 transparent; } /* Color de la cola del breadcrum activo */

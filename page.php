@@ -32,6 +32,10 @@ get_header(); ?>
 		</article>
 	<?php endwhile; // end of the loop. ?>
 
+
+
+
+
 </section>
 
 <?php get_footer(); ?>

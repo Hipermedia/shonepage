@@ -1,8 +1,8 @@
 <?php 
-/** Botones para compartir en redes sociales. Estilo ANLI
+/** Menu de navegación clásico de WP
 ------------------------------------------------------------------- */ 
 ?>
-<nav id="header-main-nav" class="MainNavClasico" role="navigation">
+<nav id="header-main-nav" class="mainNav" role="navigation">
     <!-- Icono de menú para versión adaptativa -->
     <a class="toggle-nav" href="#">MENU DE NAVEGACIÓN</a>
     <!-- Menu WordPress -->

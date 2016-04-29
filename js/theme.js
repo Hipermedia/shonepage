@@ -22,9 +22,16 @@ jQuery(document).ready(function($) {
 	// Versión responsive del menú; oculta la navegación y en su defecto aparece un botón para mostrar u ocultarl la navegación
 	$('.toggle-nav').click(function(e) {
         $(this).toggleClass('activo');
-        $('#header-main-nav ul').toggleClass('activo'); 
+        $('#header-main-nav > ul').toggleClass('activo'); 
         e.preventDefault();
     });
+
+  $('#header-menu > .menu-item-has-children > a').attr("href", "#");
+  $('.menu-item-has-children').click(function() {
+    $(this).find('ul').toggleClass('show-submenu');
+   
+
+  });
 
 	// Pone la clase .active a cualquier link que haya en el documento que corresponda con el url actual
 	var url = window.location.href;

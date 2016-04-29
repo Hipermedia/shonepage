@@ -112,6 +112,11 @@ function get_plantilla_url() {
 function primalNav() {
 	get_template_part( 'inc/nav/primal-nav');
 }
+/* Classic; navegación principal usando menu de WP */
+function classicNav() {
+	get_template_part( 'inc/nav/classic-nav');
+}
+
 
 /* Cover
  * ------------------------------------------------------------- */

@@ -1,0 +1,23 @@
+.u-hsw {
+	@media (max-width: $smaller-width) {
+		display: none;
+	}
+}
+
+.u-hmw {
+	@media (max-width: $tablet-width) {
+		display: none;
+	}
+}
+
+.u-fsw {
+	@media (max-width: $smaller-width) {
+		width: 100%;
+	}
+}
+
+.u-fmw {
+	@media (max-width: $tablet-width) {
+		width: 100%;
+	}
+}

@@ -341,14 +341,16 @@ function shbase_setup() {
 			//remove_menu_page( 'edit.php?post_type=page' );    //Pages
 			remove_menu_page( 'edit-comments.php' );          //Comments
 			//remove_menu_page( 'themes.php' );                 //Appearance
-			remove_menu_page( 'users.php' );                  //Users
+			//remove_menu_page( 'users.php' );                  //Users
 			remove_menu_page( 'options-general.php' );        //Settings
 			remove_menu_page( 'tools.php' );					//Tools
 			remove_menu_page( 'plugins.php' );					//Plugins
 			remove_menu_page( 'ot-settings' );					//OT Settings
 			remove_menu_page('edit.php?post_type=acf');			//ACF Settings
 			remove_menu_page( 'wpcf7' );
-			
+			remove_menu_page( 'WP-Lightbox-2' );				//lightbox
+			remove_menu_page('edit.php?post_type=acf-field-group');			//ACF Settings
+
 			//SUBMENUES
 			remove_submenu_page( 'index.php', 'update-core.php' );
 			remove_submenu_page( 'edit.php', 'edit-tags.php?taxonomy=post_tag' );

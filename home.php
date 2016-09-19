@@ -15,57 +15,63 @@
 get_header(); ?>
 
 	<!-- Cover -->
-	<?php primalCover(); // Cover con imágen de fondo, imagen principal y títulos ?>
+	<?php primalCover(); // Cover con imagen de fondo, imagen principal y títulos ?>
 	
-	<?php primalDocs(); ?>
-	
-	<h1>deploy.sh existe prueba 3</h1>
-
-	<?php newsSlider(); ?>
-
-	<?php sauteBlocks();  //  Bloques de contenido salteados ?>
-
-	<?php videoSlider(); ?>
-
-	<?php starchiQuote(); ?>
-
-	<?php cardsTestimony(); ?>
-
-	<?php filmstripSlider(); ?>
-
-	<?php //textSlider(); ?>
-	
-	<!-- Bloques -->
+	<!-- Bloques comunes -->
 	<?php primalBlocks(); //  Bloques de contenido primordiales ?>
 	
-	<?php primalSlider(); ?>
-
-	<?php primalTabs(); ?>
-
-	<!-- Texto -->
-	<?php primalText(); //  Bloques de contenido primordiales ?>
+	<?php primalTabs(); // Bloque de pestañas ?>
 	
+	<?php sauteBlocks(); //  Bloques de contenido salteados ?>
+
+	<?php primalText(); //  Bloques de contenido primordiales ?>
+
+	<?php starchiQuote(); // Bloque a fullwidth para frase con imagen de fondo parallax ?>
+
+
+	<!-- Sliders -->
+	<?php newsSlider(); // Slider con formato para mostrar nosticias ?>
+
+	<?php videoSlider(); // Rotatorio de videos ?>
+
+	<?php filmstripSlider(); // Slider en formato filmstrip ?>
+
+	<?php textSlider(); // Slider básico de texto ?>
+
+	<?php primalSlider(); // Slider tradicional ?>
+
+	<?php gallerySlider(); // Slider para galerías ?>
+	
+
 	<!-- Testimonios -->
+	<?php cardsTestimony(); // Bloque de testimonios con efecto rollover ?>
+
 	<?php primalTestimony(); //  Bloques de contenido primordiales ?>
 
-	<?php gallerySlider(); ?>
 
-	<?php meteoroContact(); ?>
+	<!-- Galerías -->
+	<?php primalGallery(); // Bloque para galerías ?>
+
+	<?php imgridPortfolio(); // Fotos con plugin Imgrid ?>
+
+
+	<!-- Bloques para contacto -->
+	<?php meteoroContact(); // Bloque de contacto con mapa de fondo ?>
 	
-	<?php primalContact(); ?>
+	<?php primalContact(); // Bloque de contacto con imagen de fondo ?>
 
-	<?php completeContact(); ?>
+	<?php completeContact(); // Bloque de contacto con todos los datos, formulario y mapa ?>
+
+	
+	<!-- Bloques misceláneos -->
+	<?php primalDocs(); // Bloque para presentar documentos ?>
+
+	<?php primalPricing(); // Bloques de precios ?>
+
+	<?php backgroundVideo(); // Bloque con video de fondo ?>
 
 
-
-	<?php primalGallery(); ?>
-
-	<?php primalPricing(); ?>
-
-	<?php imgridPortfolio(); ?>
-
-	<?php backgroundVideo(); ?>
-
-	<?php primalFooter(); ?>
+	<!-- Footer en columnas -->
+	<?php primalFooter(); // Footer con formato en columnas ?>
 
 <?php get_footer(); ?>

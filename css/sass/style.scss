@@ -55,6 +55,9 @@ Text Domain: shbase
 //@import "support/bootstrap-material/_material-wfont.scss"; /* Bootstrap Material Desing */
 //@import "support/bootstrap-material/_ripples.scss"; /* Bootstrap Material Desing */
 
+/*Estilo del sistema de pagos*/
+@import "sistema-pagos/_pagos.scss";
+
 /* Base
 ------------------------------------------*/
 @import "_global.scss";

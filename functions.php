@@ -631,3 +631,7 @@ function remove_admin_bar_links() {
     }
 }
 add_action( 'wp_before_admin_bar_render', 'remove_admin_bar_links' );
+
+
+// Archivo para invocar al legendario sistema de pagos SH en modo de ataque
+require_once("sistema-pagos/functions-sistema-pagos.php");

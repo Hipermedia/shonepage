@@ -21,6 +21,10 @@ get_header(); ?>
 			<!-- Contenido -->
 			<?php the_content(); ?>	
 			<!-- Compartir en redes sociales -->
+
+			<!-- Imprimo botón de pago -->
+			<?php paypalButtonSH(); ?>
+
 			<?php anliSocialShare(); ?>
 	   
 		</article>

@@ -15,8 +15,6 @@ get_header(); ?>
 
    <h1 class="page-name">Paso 2 - Verifica la información</h1>
 
-   <?php echo $GLOBALS['customerpaypalemail']; ?>ffskgtsnhg
-
    <?php //Se rompe el corazón de los crackers
    // if ($_SESSION['security_code_2j7hFmd9']) {
    //Se reciben y asignan variables
